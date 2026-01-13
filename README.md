@@ -79,10 +79,9 @@ is subject to the erstwhile institute policy.
 
 ## Course Content ##
 
-### Orientation ###
-1. [:simple-googleslides: 
-   Overview][L00]{: target="_blank" } and
-   administrative details. 
+1. **[MST]**{: .htag} **[EST]**{: .htag}
+   [:simple-googleslides: Overview, Introduction and
+   Open Problems][L01]{: target="_blank" }.
 
 ### Introduction to Virtual Reality ###
 
@@ -253,5 +252,6 @@ The students will be able to:
 [UTA027-L17]: https://docs.google.com/presentation/d/1AmYnJb1KzkuWEgvR0NJGY5V75znAuNqcmgsgKla7KA0/edit?usp=sharing
 [UTA027-L18]: https://docs.google.com/presentation/d/1hSASwVI4EJd6ImJA-LFU6S4eSYcA-k0GDYmVdDGq77U/edit?usp=sharing
 
-
 [UTA027]: https://tiet-uta027.github.io/a01 "UTA027: Artificial Intelligence &bull; Raghav B. Venkataramaiyer @TIET"
+
+[L01]: https://docs.google.com/presentation/d/1I1VXZh4eZK2GuRmtKL5ch3Crl3dGhj0EeLquN1-0s9s/edit?usp=sharing "UNC512 L01 Overview, Introduction and Open Problems"
