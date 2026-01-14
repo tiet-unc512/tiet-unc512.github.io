@@ -105,6 +105,8 @@ is subject to the erstwhile institute policy.
    [:simple-googledocs: (Scribe)][L02-SCRIBE]{: target="_blank"}
    [:simple-googleslides: Virtual Reality Input and
    Output Modalities][L02]{: target="_blank"}.
+3. **[MST]**{: .htag} **[EST]**{: .htag} [The Geometric
+   Model](./the-geometric-model)
 
 ## Supplementary Course Content ##
 
