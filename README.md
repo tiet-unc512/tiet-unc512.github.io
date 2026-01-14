@@ -28,18 +28,36 @@ thapar -dot- edu>`
 
 ## Evaluation ##
 
-| Code        | Title                                  | Date | Weightage |
-|-------------|----------------------------------------|------|-----------|
-| `SESS#SEM1` | [Proj Eval 1](#proj-eval-1)            | CE   | 10        |
-| `MST`       | [Mid Sem Exam](#semester-exam-written) | TBA  | 30        |
-| `SESS#SEM2` | [Proj Eval 2](#proj-eval-2)            | CE   | 20        |
-| `EST`       | [End Sem Exam](#semester-exam-written) | TBA  | 40        |
+| Code        | Title                                  | Date                    | Weightage |
+|-------------|----------------------------------------|-------------------------|-----------|
+| `SESS#SEM1` | [Proj Eval 1](#proj-eval-1)            | CE                      | 10        |
+| `MST`       | [Mid Sem Exam](#semester-exam-written) | TBA                     | 30        |
+| `SESS#SEM2` | [Proj Eval 2](#proj-eval-2)            | CE/ Mon Apr 20, 3:30 PM | 20        |
+| `EST`       | [End Sem Exam](#semester-exam-written) | TBA                     | 40        |
 
 ## Semester Project ##
 
+Students shall partition themselves into teams of two
+or three, in order to  
+*a)* [propose an academic project][PROPOSAL-HOWTO]{: target="_blank"}
+for the semester based on the course curriculum, and  
+*b)* report the findings.
+
 ### Proj Eval 1 ###
 
+Evaluation of the project proposal, and a mid-sem
+progress monitoring.  This shall be conducted in
+continuous evaluation mode [CE].
+
 ### Proj Eval 2 ###
+
+Intermediate progress monitoring post MST in continuous
+evaluation mode [CE], and Final evaluation based on a
+seminar, tentatively scheduled on Mon Apr 20, 3:30 PM.
+
+### Resources ###
+
+1. [Project Proposal [HOWTO]][PROPOSAL-HOWTO]{: target="_blank"}
 
 ## Semester Exam (Written) ##
 
@@ -69,7 +87,8 @@ instructions,
 6.  Marks shall be awarded on the basis of solutions,
     **not** steps.
 
-![](./assets/sample-q1.png)
+![](./assets/sample-q1.png)  
+*Fig: Sample question in [MST]/[EST]*
 
 ### Choice ###
 
@@ -82,8 +101,6 @@ is subject to the erstwhile institute policy.
 1. **[MST]**{: .htag} **[EST]**{: .htag}
    [:simple-googleslides: Overview, Introduction and
    Open Problems][L01]{: target="_blank" }.
-
-### Introduction to Virtual Reality ###
 
 ## Supplementary Course Content ##
 
@@ -225,6 +242,8 @@ The students will be able to:
 
 *[MOOC]: Online Course (or a part of it.)
 
+*[CE]: Continuous Evaluation, done as a part of contact hours, with an implicit attendance component.
+
 [PY]: https://gist.github.com/bvraghav/7bd132bf4a93dfb4179673a377b324db
 [GA]: https://gist.github.com/bvraghav/f2e910d7d30a2b8a0b9c288d61dd6bd9
 [ITILA]: http://www.inference.org.uk/mackay/itila/book.html "ITILA Website"
@@ -255,3 +274,4 @@ The students will be able to:
 [UTA027]: https://tiet-uta027.github.io/a01 "UTA027: Artificial Intelligence &bull; Raghav B. Venkataramaiyer @TIET"
 
 [L01]: https://docs.google.com/presentation/d/1I1VXZh4eZK2GuRmtKL5ch3Crl3dGhj0EeLquN1-0s9s/edit?usp=sharing "UNC512 L01 Overview, Introduction and Open Problems"
+[PROPOSAL-HOWTO]: https://docs.google.com/document/d/11oCHkJQwGifkDLSH5DMWAUcJIApAidObK_lTBi2-414/edit?usp=sharing
