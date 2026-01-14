@@ -1,4 +1,4 @@
-% Created 2026-01-14 Wed 13:14
+% Created 2026-01-14 Wed 13:27
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8x]{inputenc}
@@ -17,13 +17,43 @@
 \graphicspath{ {./images/} }
 \usepackage[labelformat=simple]{subcaption}
 \renewcommand\thesubfigure{(\alph{subfigure})}
+\usepackage[date=year,%
+backend=biber,%
+style=alphabetic,%
+maxnames=5,%
+minnames=3,%
+maxalphanames=4,%
+minalphanames=3,%
+backref=true,%
+doi=false,%
+isbn=false,%
+url=false,%
+eprint=false]{biblatex}
+\DefineBibliographyStrings{english}{%
+backrefpage  = {\lowercase{s}ee p.}, % for single page number
+backrefpages = {\lowercase{s}ee pp.} % for multiple page numbers
+}
+\addbibresource{/home/bvraghav/bibliography.bib}
+\hypersetup{
+colorlinks,
+allcolors=.,
+urlcolor=blue,
+citecolor=gray,
+linkcolor=red,
+}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{parskip}
+\usepackage[a4paper,margin=1.5in]{geometry}
 \setcounter{secnumdepth}{2}
 \author{Raghav B. Venkataramaiyer}
 \date{Jan '26}
-\title{Geomtric Model}
+\title{Geometric Model}
 \hypersetup{
  pdfauthor={Raghav B. Venkataramaiyer},
- pdftitle={Geomtric Model},
+ pdftitle={Geometric Model},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
@@ -35,13 +65,13 @@
 \tableofcontents
 
 \section{Geometric Model}
-\label{sec:orgf9c81f7}
+\label{sec:orgb60aaec}
 
 \subsection{Coordinates}
-\label{sec:orgc1238a9}
+\label{sec:org5d3eb69}
 
 \subsubsection*{Euclidean Plane}
-\label{sec:orge5561fe}
+\label{sec:org3fbe40c}
 A point in \emph{(2-dimensional)} space \emph{(a.k.a. plane)}, is
 defined as
 \begin{align*}
@@ -68,7 +98,7 @@ function of the two points, defined as,
     (y_i-y_j)^2+(x_i-x_j)^2 
 \end{align*}
 \subsubsection*{Euclidean Space}
-\label{sec:orgfb44ce2}
+\label{sec:org7544b45}
 
 Extend the understanding to multiple dimensions, and we
 get Euclidean Space,
@@ -99,7 +129,7 @@ function of the two points, defined as,
     (p_1-q_1)^2+\cdots+(p_d-q_d)^2 
 \end{align*}
 \subsubsection*{Polar Coordinates}
-\label{sec:orgedda25f}
+\label{sec:org7376889}
 \(\mathbf{p} \equiv (r,\theta)\)
 
 Defined by an origin, a pole, and each point in
@@ -110,13 +140,13 @@ Defined by an origin, a pole, and each point in
 the point and origin.
 \end{itemize}
 \subsubsection*{Spherical Coordinates}
-\label{sec:org4b9cc2a}
+\label{sec:org8946d25}
 \(\mathbf{p} \equiv (r,\theta,\phi)\)
 
 Extend the polar coordinates to three dimensional
 space, we get spherical coordinates.
 \subsubsection*{Geo-spherical Coordinates}
-\label{sec:org93adefc}
+\label{sec:org3218c5a}
 \(\mathbf{p} \equiv (\theta,\phi)\) \\
 \textsc{or} \\
 \(\mathbf{p} \equiv (1,\theta,\phi)\)
@@ -132,7 +162,7 @@ Assume that for all points in space, \(r\) is constant;
 and hence redundant; and thus a point is expressed only
 in angular coordinates,
 \subsection{Coordinate Systems and Frames of Reference}
-\label{sec:orgd9d3ae2}
+\label{sec:org6f6c682}
 
 Another way to define coordinate system is like
 specifying a reference frame.  It's also referred to as
@@ -173,7 +203,7 @@ of earth's rotation about it's \emph{(diametric)} axis;
 earth's radius)}.
 \end{itemize}
 \subsection{Linear Transformation}
-\label{sec:orgb782371}
+\label{sec:org74a1af2}
 From Linear Algebra, \\
 with \(\mathbf{x}\in\mathbb{X}\) \\
 \emph{implicitly read as vector \(\mathbf{x}\) in vector-space
@@ -197,10 +227,10 @@ would imply that \(\mathbf{y}\) is a point in
 
 This operation is also known as linear transformation.
 \subsection{Geometric Transformation}
-\label{sec:orge479436}
+\label{sec:org71ad93a}
 
 \subsubsection*{Geometric Operations}
-\label{sec:org0f8968b}
+\label{sec:orgcfc330f}
 
 \begin{enumerate}
 \item Scale
@@ -210,7 +240,7 @@ This operation is also known as linear transformation.
 \item Project \emph{(or, Projection)}
 \end{enumerate}
 \subsubsection*{Scale}
-\label{sec:orga8dd145}
+\label{sec:org24b262a}
 
 \begin{align*}
   \mathbf{y}
@@ -224,7 +254,7 @@ This operation is also known as linear transformation.
   \end{bmatrix}
 \end{align*}
 \subsubsection*{Rotate}
-\label{sec:orgb421a9f}
+\label{sec:orgdd084d7}
 
 \begin{align*}
   \mathbf{y}
@@ -238,7 +268,7 @@ This operation is also known as linear transformation.
   \end{bmatrix}
 \end{align*}
 \subsubsection*{Shear}
-\label{sec:org905892e}
+\label{sec:org6e099b2}
 
 \begin{align*}
   \mathbf{y} &= A\mathbf{x} &= \begin{bmatrix}
@@ -249,7 +279,7 @@ This operation is also known as linear transformation.
   \end{bmatrix}
 \end{align*}
 \subsubsection*{Homogeneous Coordinates}
-\label{sec:org2c0401c}
+\label{sec:org4aa8d41}
 
 \def\svgwidth{0.5\linewidth}
 \input{images/RationalBezier2D.pdf_tex}
@@ -265,7 +295,7 @@ a point.
   \end{bmatrix} && \forall \lambda\in\mathbb{R}
 \end{align*}
 \subsubsection*{Advantages of using homogeneous coordinates}
-\label{sec:orgc201e2e}
+\label{sec:org23b18f4}
 
 From linear algebra, we can represent,
 
@@ -285,7 +315,7 @@ coordinates.
 
 \emph{(Think about it)}
 \subsubsection*{Translation}
-\label{sec:org86d5d7e}
+\label{sec:orgb4b154e}
 With homogeneous coordinates,
 
 \begin{align*}
@@ -299,11 +329,11 @@ With homogeneous coordinates,
   \end{bmatrix}
 \end{align*}
 \subsubsection*{Transformation Matrices With Homogeneous Coordinates}
-\label{sec:orga1f0637}
+\label{sec:org9ff2f4e}
 
 \begin{itemize}
 \item Scale
-\label{sec:orgdce3de9}
+\label{sec:org3a5681f}
 
 \begin{align*}
   A &= \begin{bmatrix}
@@ -313,7 +343,7 @@ With homogeneous coordinates,
   \end{bmatrix}
 \end{align*}
 \item Rotate
-\label{sec:org26df4ad}
+\label{sec:org3608444}
 
 \begin{align*}
   A &= \begin{bmatrix}
@@ -323,7 +353,7 @@ With homogeneous coordinates,
   \end{bmatrix}
 \end{align*}
 \item Shear
-\label{sec:org6c42467}
+\label{sec:orge6eb038}
 
 \begin{align*}
   A &= \begin{bmatrix}
@@ -332,13 +362,13 @@ With homogeneous coordinates,
 \end{align*}
 \end{itemize}
 \subsubsection*{Geometric Transformation in 3-or-more Dims}
-\label{sec:org80fb23e}
+\label{sec:org98609ec}
 
 The matrices here represent transformation with
 homogeneous coordinates; 
 \begin{itemize}
 \item Scale
-\label{sec:org05ade9a}
+\label{sec:org3a0f435}
 
 \begin{align*}
   A &= \begin{bmatrix}
@@ -349,7 +379,7 @@ homogeneous coordinates;
   \end{bmatrix}
 \end{align*}
 \item Translate
-\label{sec:org2450938}
+\label{sec:org35038e4}
 
 \begin{align*}
   A &= \begin{bmatrix}
@@ -364,7 +394,7 @@ homogeneous coordinates;
       \end{bmatrix}
 \end{align*}
 \item Shear
-\label{sec:org9336a02}
+\label{sec:org7b86a71}
 
 \begin{align*}
   A &= \begin{bmatrix}
@@ -382,7 +412,7 @@ where, \(U_{0}\) is an upper triangular matrix with zero
 diagonals.
 \end{itemize}
 \subsubsection*{Advanced Topics}
-\label{sec:org7c3f01a}
+\label{sec:org8ab214e}
 
 Projection and Rotation in 3D are considered to be
 advanced topics in Computer Graphics.  The curious
@@ -392,16 +422,16 @@ details.
 As in practice, the students shall use mature
 libraries, instead, to this effect.
 \subsubsection*{Composing Transforms}
-\label{sec:org385ae7e}
+\label{sec:orge5df86e}
 
 \begin{itemize}
 \item Interpretation
-\label{sec:org0fded0c}
+\label{sec:org569957c}
 
 A transformation is interpreted as to ``correspond from
 one space to another.''
 \item Example
-\label{sec:orgf947f02}
+\label{sec:orgb0bd557}
 
 Let's consider our solar system.
 
@@ -448,16 +478,16 @@ This method is called (de)composing.
 \end{enumerate}
 \end{itemize}
 \subsection{Model-View-Projection}
-\label{sec:orgcd4ef87}
+\label{sec:org501cb20}
 
 \begin{itemize}
 \item \textbf{Model Space}
-\label{sec:orgbefc9c9}
+\label{sec:orgcf85fe7}
 Continuing with the same example, let's assume that
 ``the sun'' is our ``model space.''  And \(A_{se}\) expresses
 a point on the earth's surface in the sun-space.
 \item \textbf{View Space}
-\label{sec:org8fcdf36}
+\label{sec:org1896dc2}
 We would like to view the system from a point in space
 looking at the solar system so that the view is fully
 captured within a \(60^{\circ}\) field of view.
@@ -477,14 +507,14 @@ function:
 \item \href{https://morning-flow.com/2023/02/06/the-math-behind-the-lookat-transform/}{Simón's Blogpost}
 \end{enumerate}
 \item \textbf{Projection Space}
-\label{sec:org7e23bbc}
+\label{sec:orgc522dcc}
 Depending upon whether the camera is orthogonal or
 perspective, we finally capture the projection of ``the
 scene,'' on an imaginary projection screen kept at
 \(\begin{bmatrix}0&0&1\end{bmatrix}^{\top}\).  This is
 called ``the projection space.''
 \item \textbf{The MVP Transformation}
-\label{sec:org8d4f323}
+\label{sec:org79713bd}
 To compute the coordinates of a point on object, say
 \(\mathbf{p}_e\), as projected onto a projection space,
 \(\mathbf{p}_{\pi}\), we compute this as,
@@ -502,7 +532,7 @@ view space; and \\
 model space.
 \end{itemize}
 \section{Geometric Image Formation}
-\label{sec:org2d49104}
+\label{sec:org0effca6}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{org-download-images/Image_Formation_and_Digital_Representation/2025-11-15_15-25-09_screenshot.png}
@@ -552,7 +582,7 @@ and provides the framework for tasks like 3D
 reconstruction (\textbf{Structure from Motion}) and position
 estimation (\textbf{Visual Odometry}).
 \section{Camera Tracking}
-\label{sec:org4032467}
+\label{sec:orgcfbdb4f}
 
 \begin{itemize}
 \item Calibration and registration are fundamental
@@ -567,7 +597,7 @@ incorrectly scaled, breaking the immersive illusion
 of AR.
 \end{itemize}
 \subsection{Calibration}
-\label{sec:orgbb013a6}
+\label{sec:org0dfff32}
 Determine the camera properties,
 \begin{itemize}
 \item Intrinsic Params
@@ -589,16 +619,16 @@ position and orientation})
 
 (As covered in the geometric model)
 \subsection{Registration}
-\label{sec:orga4809d9}
+\label{sec:org7885ecc}
 Align virtual content with the real world in real-time,
 \subsubsection*{Scene Information Extraction:}
-\label{sec:orge245f10}
+\label{sec:org1f155da}
 \begin{itemize}
 \item Feature Detection
 \item Sensor Fusion
 \end{itemize}
 \subsubsection*{Temporal Correspondence Estimation:}
-\label{sec:orgfcdbf32}
+\label{sec:org4a496f7}
 \begin{itemize}
 \item Correspondence across scene information
 \item Marker-based AR: Detect markers and establish
@@ -607,7 +637,7 @@ correspondence
 correspondence.
 \end{itemize}
 \subsubsection*{Pose Estimation (Real-time tracking)}
-\label{sec:orgd3f64bf}
+\label{sec:org890aec0}
 \begin{itemize}
 \item Estimate 6 DoF camera pose using correspondences;
 \item This is an iterative process of refining the pose
@@ -622,7 +652,7 @@ particle filters)
 \end{itemize}
 \end{itemize}
 \subsubsection*{Virtual Content Overlay}
-\label{sec:orgbff8ad8}
+\label{sec:orgbc118e9}
 \begin{itemize}
 \item Based on estimated camera pose, and predefined
 transformation of virtual content relative to
@@ -639,7 +669,7 @@ perspective, scale and rotation)
 \end{itemize}
 \end{itemize}
 \subsection{Registration Strategies}
-\label{sec:org6c9c464}
+\label{sec:orgb9600e9}
 \begin{itemize}
 \item Marker-based : Track the marker
 \item Markerless : Track the natural features
@@ -649,7 +679,7 @@ world
 an outdoor setting.
 \end{itemize}
 \subsection{Essentially}
-\label{sec:org9d2fda2}
+\label{sec:orgb6c2bcf}
 \begin{itemize}
 \item Calibration is a one-time (or occasional) process to
 characterize the camera itself; while
@@ -657,4 +687,7 @@ characterize the camera itself; while
 correctly place virtual objects in the augmented
 view.
 \end{itemize}
+\section*{References}
+\label{sec:orgdf5ea79}
+\printbibliography[heading=none]
 \end{document}

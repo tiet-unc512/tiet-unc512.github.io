@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       81e2ade2-4b53-4a02-baa4-476116a935dd
 :END:
-#+TITLE: Geomtric Model
+#+TITLE: Geometric Model
 #+AUTHOR: Raghav B. Venkataramaiyer
 #+DATE: Jan '26
 #+options: toc:2 num:2
@@ -13,6 +13,46 @@
 # For multiple sub figures.
 #+latex_header_extra: \usepackage[labelformat=simple]{subcaption}
 #+latex_header_extra: \renewcommand\thesubfigure{(\alph{subfigure})}
+
+#+latex_header_extra: \usepackage[date=year,%
+#+latex_header_extra:   backend=biber,%
+#+latex_header_extra:   style=alphabetic,%
+#+latex_header_extra:   maxnames=5,%
+#+latex_header_extra:   minnames=3,%
+#+latex_header_extra:   maxalphanames=4,%
+#+latex_header_extra:   minalphanames=3,%
+#+latex_header_extra:   backref=true,%
+#+latex_header_extra:   doi=false,%
+#+latex_header_extra:   isbn=false,%
+#+latex_header_extra:   url=false,%
+#+latex_header_extra:   eprint=false]{biblatex}
+#+latex_header_extra: \DefineBibliographyStrings{english}{%
+#+latex_header_extra:   backrefpage  = {\lowercase{s}ee p.}, % for single page number
+#+latex_header_extra:   backrefpages = {\lowercase{s}ee pp.} % for multiple page numbers
+#+latex_header_extra: }
+#+latex_header_extra: \addbibresource{/home/bvraghav/bibliography.bib}
+
+#+latex_header_extra: \hypersetup{
+#+latex_header_extra:   colorlinks,
+#+latex_header_extra:   allcolors=.,
+#+latex_header_extra:   urlcolor=blue,
+#+latex_header_extra:   citecolor=gray,
+#+latex_header_extra:   linkcolor=red,
+#+latex_header_extra: }
+
+# For text alignment
+#+latex_header_extra: \usepackage{ragged2e}
+
+# For more robust tables
+#+latex_header_extra: \usepackage{tabularx}
+
+# For line spacing and indentation
+#+latex_header_extra: \usepackage{enumitem}
+#+latex_header_extra: \setlist{noitemsep}
+#+latex_header_extra: \usepackage{parskip}
+
+# For page size
+#+latex_header_extra: \usepackage[a4paper,margin=1.5in]{geometry}
 
 #+md: <style>
 #+md: .bvr-full-height-image-wrapper img {max-height: 30em}
@@ -648,3 +688,10 @@ Align virtual content with the real world in real-time,
 ** Optical Tracking
 
 ** Sensor Fusion
+
+* References
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+\printbibliography[heading=none]
