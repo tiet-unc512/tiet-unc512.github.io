@@ -1,18 +1,19 @@
 
 ## Table of Contents
 
-1.  [Geometric Model](#org9b413fa)
-    1.  [Coordinates](#org5f62716)
-    2.  [Coordinate Systems and Frames of Reference](#orgc8f2b5b)
-    3.  [Linear Transformation](#org46953f8)
-    4.  [Geometric Transformation](#orge3f06be)
-    5.  [Model-View-Projection](#orgd6e2a0f)
-2.  [Geometric Image Formation](#orgf837188)
-3.  [Camera Tracking](#org25d7240)
-    1.  [Calibration](#org19a17fd)
-    2.  [Registration](#org800842d)
-    3.  [Registration Strategies](#orgc84251e)
-    4.  [Essentially](#org89bdae0)
+1.  [Geometric Model](#org556a1c8)
+    1.  [Coordinates](#orgda555b2)
+    2.  [Coordinate Systems and Frames of Reference](#orgadbdfd8)
+    3.  [Linear Transformation](#org5ef0155)
+    4.  [Geometric Transformation](#orgea1a766)
+    5.  [Model-View-Projection](#org52828db)
+2.  [Geometric Image Formation](#org68df3cf)
+3.  [Camera Tracking](#org52d7c9b)
+    1.  [Calibration](#org71cbcc9)
+    2.  [Registration](#org8ef5329)
+    3.  [Registration Strategies](#org4b49a6f)
+    4.  [Essentially](#org4eb092c)
+-   [References](#org0a09537)
 
 <style>
 
@@ -23,12 +24,12 @@
 [:material-file-pdf-box: Download this page as PDF](./index.pdf)
 
 
-<a id="org9b413fa"></a>
+<a id="org556a1c8"></a>
 
 ## Geometric Model
 
 
-<a id="org5f62716"></a>
+<a id="orgda555b2"></a>
 
 ### Coordinates
 
@@ -135,7 +136,7 @@ and hence redundant; and thus a point is expressed only
 in angular coordinates,
 
 
-<a id="orgc8f2b5b"></a>
+<a id="orgadbdfd8"></a>
 
 ### Coordinate Systems and Frames of Reference
 
@@ -178,7 +179,7 @@ specifying a reference frame.  It’s also referred to as
     earth’s radius)*.
 
 
-<a id="org46953f8"></a>
+<a id="org5ef0155"></a>
 
 ### Linear Transformation
 
@@ -207,7 +208,7 @@ $\mathbb{X}$.
 This operation is also known as linear transformation.
 
 
-<a id="orge3f06be"></a>
+<a id="orgea1a766"></a>
 
 ### Geometric Transformation
 
@@ -460,7 +461,7 @@ libraries, instead, to this effect.
         This method is called (de)composing.
 
 
-<a id="orgd6e2a0f"></a>
+<a id="org52828db"></a>
 
 ### Model-View-Projection
 
@@ -517,7 +518,7 @@ libraries, instead, to this effect.
     model space.
 
 
-<a id="orgf837188"></a>
+<a id="org68df3cf"></a>
 
 ## Geometric Image Formation
 
@@ -564,7 +565,7 @@ reconstruction (**Structure from Motion**) and position
 estimation (**Visual Odometry**).
 
 
-<a id="org25d7240"></a>
+<a id="org52d7c9b"></a>
 
 ## Camera Tracking
 
@@ -580,7 +581,7 @@ estimation (**Visual Odometry**).
     of AR.
 
 
-<a id="org19a17fd"></a>
+<a id="org71cbcc9"></a>
 
 ### Calibration
 
@@ -601,7 +602,7 @@ Determine the camera properties,
 (As covered in the geometric model)
 
 
-<a id="org800842d"></a>
+<a id="org8ef5329"></a>
 
 ### Registration
 
@@ -651,7 +652,7 @@ Align virtual content with the real world in real-time,
     -   Occlusion handling.
 
 
-<a id="orgc84251e"></a>
+<a id="org4b49a6f"></a>
 
 ### Registration Strategies
 
@@ -663,7 +664,7 @@ Align virtual content with the real world in real-time,
     an outdoor setting.
 
 
-<a id="org89bdae0"></a>
+<a id="org4eb092c"></a>
 
 ### Essentially
 
@@ -672,4 +673,11 @@ Align virtual content with the real world in real-time,
 -   Registration is the continuous, real-time process, to
     correctly place virtual objects in the augmented
     view.
+
+
+<a id="org0a09537"></a>
+
+## References
+
+\printbibliography[heading=none]
 
