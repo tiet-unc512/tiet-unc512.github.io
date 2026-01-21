@@ -1,19 +1,19 @@
 
 ## Table of Contents
 
-1.  [Geometric Model](#org556a1c8)
-    1.  [Coordinates](#orgda555b2)
-    2.  [Coordinate Systems and Frames of Reference](#orgadbdfd8)
-    3.  [Linear Transformation](#org5ef0155)
-    4.  [Geometric Transformation](#orgea1a766)
-    5.  [Model-View-Projection](#org52828db)
-2.  [Geometric Image Formation](#org68df3cf)
-3.  [Camera Tracking](#org52d7c9b)
-    1.  [Calibration](#org71cbcc9)
-    2.  [Registration](#org8ef5329)
-    3.  [Registration Strategies](#org4b49a6f)
-    4.  [Essentially](#org4eb092c)
--   [References](#org0a09537)
+1.  [Geometric Model](#org230705d)
+    1.  [Coordinates](#org59b9dc5)
+    2.  [Coordinate Systems and Frames of Reference](#org5c778f3)
+    3.  [Linear Transformation](#org737262c)
+    4.  [Geometric Transformation](#org62e4b70)
+    5.  [Model-View-Projection](#org0bf905a)
+2.  [Geometric Image Formation](#org53357c3)
+3.  [Camera Tracking](#org730bc84)
+    1.  [Calibration](#org7d70cde)
+    2.  [Registration](#org8fc6024)
+    3.  [Registration Strategies](#orgf53edd2)
+    4.  [Essentially](#orgb38e587)
+-   [References](#org2ee2112)
 
 <style>
 
@@ -24,12 +24,12 @@
 [:material-file-pdf-box: Download this page as PDF](./index.pdf)
 
 
-<a id="org556a1c8"></a>
+<a id="org230705d"></a>
 
 ## Geometric Model
 
 
-<a id="orgda555b2"></a>
+<a id="org59b9dc5"></a>
 
 ### Coordinates
 
@@ -136,7 +136,7 @@ and hence redundant; and thus a point is expressed only
 in angular coordinates,
 
 
-<a id="orgadbdfd8"></a>
+<a id="org5c778f3"></a>
 
 ### Coordinate Systems and Frames of Reference
 
@@ -179,7 +179,7 @@ specifying a reference frame.  It’s also referred to as
     earth’s radius)*.
 
 
-<a id="org5ef0155"></a>
+<a id="org737262c"></a>
 
 ### Linear Transformation
 
@@ -208,7 +208,7 @@ $\mathbb{X}$.
 This operation is also known as linear transformation.
 
 
-<a id="orgea1a766"></a>
+<a id="org62e4b70"></a>
 
 ### Geometric Transformation
 
@@ -439,8 +439,8 @@ libraries, instead, to this effect.
         formally given as,
         
         \begin{align*}
-          \mathbf{p}_a &= A_{ea}\mathbf{p}_e \\
-          A_{ae} &= \mathrm{rot}(\omega_a t)
+          \mathbf{p}_a &= A_{ae}\mathbf{p}_e \\
+          A_{ae} &= \mathrm{rot}(\omega_a t+\phi_{a,0})
         \end{align*}
     
     3.  Similarly in sun-space, 
@@ -448,11 +448,11 @@ libraries, instead, to this effect.
         \begin{align*}
           \mathbf{p}_s &= A_{sa}\mathbf{p}_a =
                          A_{sa}A_{ae}\mathbf{p}_e \\
-          A_{as} &= \mathrm{rot}(\omega_s t)
+          A_{as} &= \mathrm{rot}(\omega_s t+\phi_{s,0})
         \end{align*}
     
-    4.  Effectively, if $\mathbf{p}_s =
-           \mathbf{A}_{se}\mathbf{p}_e$, we have,
+    4.  Effectively, if $\mathbf{p}_s = A_{se}\mathbf{p}_e$,
+        we have,
         
         \begin{align*}
           A_{se} &= A_{sa}A_{ae}
@@ -461,7 +461,7 @@ libraries, instead, to this effect.
         This method is called (de)composing.
 
 
-<a id="org52828db"></a>
+<a id="org0bf905a"></a>
 
 ### Model-View-Projection
 
@@ -518,7 +518,7 @@ libraries, instead, to this effect.
     model space.
 
 
-<a id="org68df3cf"></a>
+<a id="org53357c3"></a>
 
 ## Geometric Image Formation
 
@@ -565,7 +565,7 @@ reconstruction (**Structure from Motion**) and position
 estimation (**Visual Odometry**).
 
 
-<a id="org52d7c9b"></a>
+<a id="org730bc84"></a>
 
 ## Camera Tracking
 
@@ -581,7 +581,7 @@ estimation (**Visual Odometry**).
     of AR.
 
 
-<a id="org71cbcc9"></a>
+<a id="org7d70cde"></a>
 
 ### Calibration
 
@@ -602,7 +602,7 @@ Determine the camera properties,
 (As covered in the geometric model)
 
 
-<a id="org8ef5329"></a>
+<a id="org8fc6024"></a>
 
 ### Registration
 
@@ -652,7 +652,7 @@ Align virtual content with the real world in real-time,
     -   Occlusion handling.
 
 
-<a id="org4b49a6f"></a>
+<a id="orgf53edd2"></a>
 
 ### Registration Strategies
 
@@ -664,7 +664,7 @@ Align virtual content with the real world in real-time,
     an outdoor setting.
 
 
-<a id="org4eb092c"></a>
+<a id="orgb38e587"></a>
 
 ### Essentially
 
@@ -675,7 +675,7 @@ Align virtual content with the real world in real-time,
     view.
 
 
-<a id="org0a09537"></a>
+<a id="org2ee2112"></a>
 
 ## References
 

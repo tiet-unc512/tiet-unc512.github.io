@@ -473,19 +473,19 @@ Let’s consider our solar system.
    $\mathbf{p}_e$ rotated by $\omega_{a} t$.  And
    formally given as,
    \begin{align*}
-     \mathbf{p}_a &= A_{ea}\mathbf{p}_e \\
-     A_{ae} &= \mathrm{rot}(\omega_a t)
+     \mathbf{p}_a &= A_{ae}\mathbf{p}_e \\
+     A_{ae} &= \mathrm{rot}(\omega_a t+\phi_{a,0})
    \end{align*}
 
 3. Similarly in sun-space, 
    \begin{align*}
      \mathbf{p}_s &= A_{sa}\mathbf{p}_a =
                     A_{sa}A_{ae}\mathbf{p}_e \\
-     A_{as} &= \mathrm{rot}(\omega_s t)
+     A_{as} &= \mathrm{rot}(\omega_s t+\phi_{s,0})
    \end{align*}
 
-4. Effectively, if $\mathbf{p}_s =
-   \mathbf{A}_{se}\mathbf{p}_e$, we have,
+4. Effectively, if $\mathbf{p}_s = A_{se}\mathbf{p}_e$,
+   we have,
 
    \begin{align*}
      A_{se} &= A_{sa}A_{ae}
