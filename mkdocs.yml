@@ -1,4 +1,5 @@
 site_name: "UNC512: Augmented and Virtual Reality"
+site_url: https://tiet-unc512.github.io/
 
 plugins:
 - search
