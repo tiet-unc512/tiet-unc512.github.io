@@ -1,0 +1,1332 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tiet-unc512.github.io/the-geometric-model/scribe/">
+      
+      
+        <link rel="prev" href="../exercise/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+  <title>UNC512: Augmented and Virtual Reality &bull; Raghav
+    B. Venkataramaiyer @TIET</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2020c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m1%205h-2v4H7v2h4v4h2v-4h4v-2h-4z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#table-of-contents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UNC512: Augmented and Virtual Reality" class="md-header__button md-logo" aria-label="UNC512: Augmented and Virtual Reality" data-md-component="logo">
+      
+  <img src="../../assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UNC512: Augmented and Virtual Reality
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Scribe
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tiet-unc512/tiet-unc512.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-unc512/tiet-unc512.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UNC512: Augmented and Virtual Reality" class="md-nav__button md-logo" aria-label="UNC512: Augmented and Virtual Reality" data-md-component="logo">
+      
+  <img src="../../assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    UNC512: Augmented and Virtual Reality
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tiet-unc512/tiet-unc512.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-unc512/tiet-unc512.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The geometric model
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The geometric model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scribe
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scribe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometric Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-systems-and-frames-of-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate Systems and Frames of Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linear Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometric-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-view-projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model-View-Projection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-image-formation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometric Image Formation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera Tracking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Camera Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registration-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registration Strategies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#essentially" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essentially
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Scribe</h1>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<ol>
+<li><a href="#org22efaef">Geometric Model</a><ol>
+<li><a href="#orgbda8e58">Coordinates</a></li>
+<li><a href="#org20a82fc">Coordinate Systems and Frames of Reference</a></li>
+<li><a href="#orgc04122b">Linear Transformation</a></li>
+<li><a href="#org27a88ad">Geometric Transformation</a></li>
+<li><a href="#orgf2cc15e">Model-View-Projection</a></li>
+</ol>
+</li>
+<li><a href="#orged8bad9">Geometric Image Formation</a></li>
+<li><a href="#orgcad2bfb">Camera Tracking</a><ol>
+<li><a href="#orgdcd0597">Calibration</a></li>
+<li><a href="#orgcbaf22b">Registration</a></li>
+<li><a href="#orgb5e9e65">Registration Strategies</a></li>
+<li><a href="#orga373cde">Essentially</a>
+-   <a href="#org9c7d8b5">References</a></li>
+</ol>
+</li>
+</ol>
+<style>
+
+.bvr-full-height-image-wrapper img {max-height: 30em}
+
+</style>
+
+<p><a href="../scribe.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> Download this page as PDF</a></p>
+<p><a id="org22efaef"></a></p>
+<h3 id="geometric-model">Geometric Model</h3>
+<p><a id="orgbda8e58"></a></p>
+<h4 id="coordinates">Coordinates</h4>
+<h5 id="euclidean-plane">Euclidean Plane</h5>
+<p>A point in <em>(2-dimensional)</em> space <em>(a.k.a. plane)</em>, is
+defined as</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}_i
+  &amp;= \begin{bmatrix} y\\x \end{bmatrix}_i
+    = \begin{bmatrix} y_i\\x_i \end{bmatrix}
+\end{align*}\]</div>
+<p>The vector difference between two points is defined as,</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}_i-\mathbf{p}_j
+  &amp;= \begin{bmatrix} y_i-y_j\\x_i-x_j \end{bmatrix}
+\end{align*}\]</div>
+<p>The distance between two points is a <em>symmetric</em>
+function of the two points, defined as,</p>
+<div class="arithmatex">\[\begin{align*}
+  \delta_{ij}
+  &amp;= \|\mathbf{p}_i-\mathbf{p}_j\|_2
+  \\
+  \delta_{ij}^2 = \delta_{ji}^2
+  &amp;= \|\mathbf{p}_i-\mathbf{p}_j\|_2^2 =
+    (y_i-y_j)^2+(x_i-x_j)^2 
+\end{align*}\]</div>
+<h5 id="euclidean-space">Euclidean Space</h5>
+<p>Extend the understanding to multiple dimensions, and we
+get Euclidean Space,</p>
+<p>A point in <em>(d-dimensional)</em> space, is defined as</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}
+  &amp;=  \begin{bmatrix}p_1\\\vdots\\p_d\end{bmatrix}
+\end{align*}\]</div>
+<p>The vector difference between two points is defined as,</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}-\mathbf{q}
+  &amp;= \begin{bmatrix}
+    p_1-q_1 \\ \vdots \\ p_d-q_d
+  \end{bmatrix}
+\end{align*}\]</div>
+<p>The distance between two points is a <em>symmetric</em>
+function of the two points, defined as,</p>
+<div class="arithmatex">\[\begin{align*}
+  \delta_{pq}
+  &amp;= \|\mathbf{p}-\mathbf{q}\|_2
+  \\
+  \delta_{pq}^2 = \delta_{qp}^2
+  &amp;= \|\mathbf{p}-\mathbf{q}\|_2^2 =
+    (p_1-q_1)^2+\cdots+(p_d-q_d)^2 
+\end{align*}\]</div>
+<h5 id="polar-coordinates">Polar Coordinates</h5>
+<p><span class="arithmatex">\(\mathbf{p} \equiv (r,\theta)\)</span></p>
+<p>Defined by an origin, a pole, and each point in
+<em>(2-dimensional)</em> space is defined by</p>
+<ul>
+<li><span class="arithmatex">\(r\)</span>, the distance between the point and origin; and</li>
+<li><span class="arithmatex">\(\theta\)</span>, the angle between pole and the line joining
+    the point and origin.</li>
+</ul>
+<h5 id="spherical-coordinates">Spherical Coordinates</h5>
+<p><span class="arithmatex">\(\mathbf{p} \equiv (r,\theta,\phi)\)</span></p>
+<p>Extend the polar coordinates to three dimensional
+space, we get spherical coordinates.</p>
+<h5 id="geo-spherical-coordinates">Geo-spherical Coordinates</h5>
+<p><span class="arithmatex">\(\mathbf{p} \equiv (\theta,\phi)\)</span> <br />
+or <br />
+<span class="arithmatex">\(\mathbf{p} \equiv (1,\theta,\phi)\)</span></p>
+<p>Useful when the space is a spherical surface, <em>e.g.</em></p>
+<ul>
+<li>The surface of the earth;</li>
+<li>Projection surface <em>(i.e. where the distance does not
+    matter.)</em></li>
+</ul>
+<p>Assume that for all points in space, <span class="arithmatex">\(r\)</span> is constant;
+and hence redundant; and thus a point is expressed only
+in angular coordinates,</p>
+<p><a id="org20a82fc"></a></p>
+<h4 id="coordinate-systems-and-frames-of-reference">Coordinate Systems and Frames of Reference</h4>
+<p>Another way to define coordinate system is like
+specifying a reference frame.  It’s also referred to as
+“space”.  <em>E.g.</em></p>
+<ul>
+<li>
+<p>Earth revolves around the sun.</p>
+<div class="arithmatex">\[\begin{align*}
+  \begin{bmatrix} y\\x \end{bmatrix}_t
+  &amp;= \begin{bmatrix} r\sin\omega t\\
+    r\cos\omega t \end{bmatrix}
+\end{align*}\]</div>
+<p>where, <span class="arithmatex">\(\begin{bmatrix} y&amp;x \end{bmatrix}_{t}^{\top}\)</span>
+are Earth’s coordinates in “Sun’s space” or in “the
+coordinate system with respect to the Sun.”</p>
+<p>where, <span class="arithmatex">\(\omega\)</span> is the <em>(uniform)</em> angular velocity
+of <em>(centre of the)</em> earth; <span class="arithmatex">\(t\)</span> is time; and that <span class="arithmatex">\(r\)</span>
+is a constant <em>(the earth-to-sun distance)</em>.</p>
+</li>
+<li>
+<p>The Earth rotates around its axis;</p>
+<div class="arithmatex">\[\begin{align*}
+  \begin{bmatrix} y\\x \end{bmatrix}_t
+  &amp;= \begin{bmatrix} r\sin\omega t\\
+    r\cos\omega t \end{bmatrix}
+\end{align*}\]</div>
+<p>where, <span class="arithmatex">\(\begin{bmatrix} y&amp;x \end{bmatrix}_{t}^{\top}\)</span>
+are coordinates of Earth’s surface in “Earth Axis’
+space” or in “the coordinate system with respect to
+the Earth’s Axis.”</p>
+<p>where, <span class="arithmatex">\(\omega\)</span> is the <em>(uniform)</em> angular velocity
+of earth’s rotation about it’s <em>(diametric)</em> axis;
+<span class="arithmatex">\(t\)</span> is time; and that <span class="arithmatex">\(r\)</span> is a constant <em>(the
+earth’s radius)</em>.</p>
+</li>
+</ul>
+<p><a id="orgc04122b"></a></p>
+<h4 id="linear-transformation">Linear Transformation</h4>
+<p>From Linear Algebra, <br />
+with <span class="arithmatex">\(\mathbf{x}\in\mathbb{X}\)</span> <br />
+<em>implicitly read as vector <span class="arithmatex">\(\mathbf{x}\)</span> in vector-space
+<span class="arithmatex">\(\mathbb{X}\)</span>.</em></p>
+<p>Similarly <span class="arithmatex">\(\mathbf{y}\in\mathbb{Y}\)</span>, and <br />
+a linear map <span class="arithmatex">\(A:\mathbb{X}\to\mathbb{Y}\)</span> <br />
+<em>read as <span class="arithmatex">\(A\)</span> maps <span class="arithmatex">\(\mathbb{X}\)</span> to <span class="arithmatex">\(\mathbb{Y}\)</span></em> <br />
+And <span class="arithmatex">\(A\)</span> is a matrix.</p>
+<p>Please note that if <span class="arithmatex">\(\mathbb{X}\)</span> is <span class="arithmatex">\(M\)</span> dimensional and
+<span class="arithmatex">\(\mathbb{Y}\)</span> is <span class="arithmatex">\(N\)</span> dimensional, then <span class="arithmatex">\(A\)</span> is said to be
+<span class="arithmatex">\(N\times M\)</span> dimensional, so that,</p>
+<div class="arithmatex">\[\begin{align*}
+\mathbf{y} &amp;= A\mathbf{x}
+\end{align*}\]</div>
+<p>would imply that <span class="arithmatex">\(\mathbf{y}\)</span> is a point in
+<span class="arithmatex">\(\mathbb{Y}\)</span> corresponding to <span class="arithmatex">\(\mathbf{x}\)</span> in
+<span class="arithmatex">\(\mathbb{X}\)</span>.</p>
+<p>This operation is also known as linear transformation.</p>
+<p><a id="org27a88ad"></a></p>
+<h4 id="geometric-transformation">Geometric Transformation</h4>
+<h5 id="geometric-operations">Geometric Operations</h5>
+<ol>
+<li>Scale</li>
+<li>Translate</li>
+<li>Rotate</li>
+<li>Shear</li>
+<li>Project <em>(or, Projection)</em></li>
+</ol>
+<h5 id="scale">Scale</h5>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{y}
+  &amp;= A\mathbf{x} &amp;= \begin{bmatrix}
+    s_1x_1 \\
+    s_2x_2
+  \end{bmatrix} \\
+  A &amp;= \begin{bmatrix}
+    s_1 &amp; 0 \\
+    0 &amp; s_2
+  \end{bmatrix}
+\end{align*}\]</div>
+<h5 id="rotate">Rotate</h5>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{y}
+  &amp;= A\mathbf{x} &amp;= \begin{bmatrix}
+    x_1\cos\theta - x_2\sin\theta \\
+    x_1\sin\theta + x_2\cos\theta
+  \end{bmatrix} \\
+  A &amp;= \begin{bmatrix}
+    \cos\theta &amp; -\sin\theta \\
+    \sin\theta &amp; \cos\theta
+  \end{bmatrix}
+\end{align*}\]</div>
+<h5 id="shear">Shear</h5>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{y} &amp;= A\mathbf{x} &amp;= \begin{bmatrix}
+    x_1+ax_2 \\ x_2
+  \end{bmatrix} \\
+  A &amp;= \begin{bmatrix}
+    1 &amp; a \\ 0 &amp; 1
+  \end{bmatrix}
+\end{align*}\]</div>
+<h5 id="homogeneous-coordinates">Homogeneous Coordinates</h5>
+<p><span class="arithmatex">\(\mathbf{p}_{i}\)</span> represents a ray in space rather than
+a point.</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}_i &amp;= \begin{bmatrix}
+    \lambda x \\ \lambda y \\ \lambda
+  \end{bmatrix} = \begin{bmatrix}
+    x \\ y \\ 1
+  \end{bmatrix} &amp;&amp; \forall \lambda\in\mathbb{R}
+\end{align*}\]</div>
+<h5 id="advantages-of-using-homogeneous-coordinates">Advantages of using homogeneous coordinates</h5>
+<p>From linear algebra, we can represent,</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{y} &amp;= A\mathbf{x} \\
+  \text{or, } y_i &amp;= \sum_j a_{ij}x_j
+\end{align*}\]</div>
+<p>But what about the following case?</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{y} &amp;= \mathbf{x} + \mathbf{t}
+\end{align*}\]</div>
+<p>This can be represented as <span class="arithmatex">\(\mathbf{y} = A\mathbf{x}\)</span>,
+if <span class="arithmatex">\(\mathbf{y}\)</span> and <span class="arithmatex">\(\mathbf{x}\)</span> are homogeneous
+coordinates.</p>
+<p><em>(Think about it)</em></p>
+<h5 id="translation">Translation</h5>
+<p>With homogeneous coordinates,</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{y} &amp;= A\mathbf{x} &amp;= \begin{bmatrix}
+    x_1 + t_1 \\
+    x_2 + t_2 \\
+    1
+  \end{bmatrix} \\
+  A &amp;= \begin{bmatrix}
+    1&amp;0&amp;t_1 \\ 0&amp;1&amp;t_1 \\ 0&amp;0&amp;1
+  \end{bmatrix}
+\end{align*}\]</div>
+<h5 id="transformation-matrices-with-homogeneous-coordinates">Transformation Matrices With Homogeneous Coordinates</h5>
+<ul>
+<li>
+<p>Scale</p>
+<div class="arithmatex">\[\begin{align*}
+  A &amp;= \begin{bmatrix}
+    s_1 &amp; 0 &amp; 0 \\
+    0 &amp; s_2 &amp; 0 \\
+    0 &amp; 0 &amp; 1
+  \end{bmatrix}
+\end{align*}\]</div>
+</li>
+<li>
+<p>Rotate</p>
+<div class="arithmatex">\[\begin{align*}
+  A &amp;= \begin{bmatrix}
+    \cos\theta &amp; -\sin\theta &amp; 0 \\
+    \sin\theta &amp; \cos\theta &amp; 0 \\
+    0 &amp; 0 &amp; 1
+  \end{bmatrix}
+\end{align*}\]</div>
+</li>
+<li>
+<p>Shear</p>
+<div class="arithmatex">\[\begin{align*}
+  A &amp;= \begin{bmatrix}
+    1 &amp; a &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1
+  \end{bmatrix}
+\end{align*}\]</div>
+</li>
+</ul>
+<h5 id="geometric-transformation-in-3-or-more-dims">Geometric Transformation in 3-or-more Dims</h5>
+<p>The matrices here represent transformation with
+homogeneous coordinates; </p>
+<ul>
+<li>
+<p>Scale</p>
+<div class="arithmatex">\[\begin{align*}
+  A &amp;= \begin{bmatrix}
+    s_1 &amp; 0 &amp; \cdots &amp; 0 \\
+    0 &amp; s_2 &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; \cdots &amp; 1
+  \end{bmatrix}
+\end{align*}\]</div>
+</li>
+<li>
+<p>Translate</p>
+<div class="arithmatex">\[\begin{align*}
+  A &amp;= \begin{bmatrix}
+    1 &amp; 0 &amp; \cdots &amp; t_1 \\
+    0 &amp; 1 &amp; \cdots &amp; t_2 \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; \cdots &amp; 1
+  \end{bmatrix}
+      = \begin{bmatrix}
+        I &amp; \mathbf{t} \\
+        \boldsymbol{0}^T &amp; 1
+      \end{bmatrix}
+\end{align*}\]</div>
+</li>
+<li>
+<p>Shear</p>
+<div class="arithmatex">\[\begin{align*}
+  A &amp;= \begin{bmatrix}
+    1 &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; 0 \\
+    0 &amp; 1 &amp; a_{23} &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1
+  \end{bmatrix} = \begin{bmatrix}
+    I+U_0 &amp; \boldsymbol{0} \\
+    \boldsymbol{0}^{\top} &amp; 1
+  \end{bmatrix}
+\end{align*}\]</div>
+<p>where, <span class="arithmatex">\(U_{0}\)</span> is an upper triangular matrix with zero
+diagonals.</p>
+</li>
+</ul>
+<h5 id="advanced-topics">Advanced Topics</h5>
+<p>Projection and Rotation in 3D are considered to be
+advanced topics in Computer Graphics.  The curious
+readers are encouraged to follow the course UCS505 for
+details.</p>
+<p>As in practice, the students shall use mature
+libraries, instead, to this effect.</p>
+<h5 id="composing-transforms">Composing Transforms</h5>
+<ul>
+<li>
+<p>Interpretation</p>
+<p>A transformation is interpreted as to “correspond from
+one space to another.”</p>
+</li>
+<li>
+<p>Example</p>
+<p>Let’s consider our solar system.</p>
+<ol>
+<li>
+<p>A point that sits on the surface of the earth with
+    long-lat as <span class="arithmatex">\((\theta,\phi)\)</span>, is given as:</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}_e &amp;= \begin{bmatrix}
+    r_e\cos\theta\cos\phi \\
+    r_e\cos\theta\sin\phi \\
+    r_e\sin\theta \\
+    1
+  \end{bmatrix}
+\end{align*}\]</div>
+<p>using homogeneous Cartesian coordinates.</p>
+</li>
+<li>
+<p>The earth rotates around its axis, with a uniform
+    angular speed <span class="arithmatex">\(\omega_a\)</span>.  So in the axis-space, the
+    coordinates would be, loosely speaking,
+    <span class="arithmatex">\(\mathbf{p}_e\)</span> rotated by <span class="arithmatex">\(\omega_{a} t\)</span>.  And
+    formally given as,</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}_a &amp;= A_{ae}\mathbf{p}_e \\
+  A_{ae} &amp;= \mathrm{rot}(\omega_a t+\phi_{a,0})
+\end{align*}\]</div>
+</li>
+<li>
+<p>Similarly in sun-space, </p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}_s &amp;= A_{sa}\mathbf{p}_a =
+                 A_{sa}A_{ae}\mathbf{p}_e \\
+  A_{as} &amp;= \mathrm{rot}(\omega_s t+\phi_{s,0})
+\end{align*}\]</div>
+</li>
+<li>
+<p>Effectively, if <span class="arithmatex">\(\mathbf{p}_s = A_{se}\mathbf{p}_e\)</span>,
+    we have,</p>
+<div class="arithmatex">\[\begin{align*}
+  A_{se} &amp;= A_{sa}A_{ae}
+\end{align*}\]</div>
+<p>This method is called (de)composing.</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><a id="orgf2cc15e"></a></p>
+<h4 id="model-view-projection">Model-View-Projection</h4>
+<ul>
+<li>
+<p><strong>Model Space</strong></p>
+<p>Continuing with the same example, let’s assume that
+“the sun” is our “model space.”  And <span class="arithmatex">\(A_{se}\)</span> expresses
+a point on the earth’s surface in the sun-space.</p>
+</li>
+<li>
+<p><strong>View Space</strong></p>
+<p>We would like to view the system from a point in space
+looking at the solar system so that the view is fully
+captured within a <span class="arithmatex">\(60^{\circ}\)</span> field of view.</p>
+<p>If the point of view is located at <span class="arithmatex">\(\mathbf{p}_c\)</span> in
+<em>model space</em>, and the camera is looking at point
+<span class="arithmatex">\(\mathbf{p}_v\)</span> in <em>model space</em>; we should be able to
+(de)compose the transformation from model-space to
+“view space” or “camera space” as a sequence of
+geometric transformations.</p>
+<p>Some practical references to the <code>glm::look_at</code>
+function:</p>
+<ol>
+<li><a href="https://gamedev.stackexchange.com/a/189020">GameDev Stack Exchange</a></li>
+<li><a href="https://www.geertarien.com/blog/2017/07/30/breakdown-of-the-lookAt-function-in-OpenGL/">Geert Ariën's Blogpost</a></li>
+<li><a href="https://morning-flow.com/2023/02/06/the-math-behind-the-lookat-transform/">Simón’s Blogpost</a></li>
+</ol>
+</li>
+<li>
+<p><strong>Projection Space</strong></p>
+<p>Depending upon whether the camera is orthogonal or
+perspective, we finally capture the projection of “the
+scene,” on an imaginary projection screen kept at
+<span class="arithmatex">\(\begin{bmatrix}0&amp;0&amp;1\end{bmatrix}^{\top}\)</span>.  This is
+called “the projection space.”</p>
+</li>
+<li>
+<p><strong>The MVP Transformation</strong></p>
+<p>To compute the coordinates of a point on object, say
+<span class="arithmatex">\(\mathbf{p}_e\)</span>, as projected onto a projection space,
+<span class="arithmatex">\(\mathbf{p}_{\pi}\)</span>, we compute this as,</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{p}_{\pi} &amp;= PVM\mathbf{p}_e
+\end{align*}\]</div>
+<p>where, <br />
+<span class="arithmatex">\(P\)</span> is the transformation matrix from view space to
+projection space; <br />
+<span class="arithmatex">\(V\)</span> is the transformation matrix from model space to
+view space; and <br />
+<span class="arithmatex">\(M\)</span> is the transformation matrix from object space to
+model space.</p>
+</li>
+</ul>
+<p><a id="orged8bad9"></a></p>
+<h3 id="geometric-image-formation">Geometric Image Formation</h3>
+<p><img alt="img" src="../org-download-images/Image_Formation_and_Digital_Representation/2025-11-15_15-25-09_screenshot.png" title="**Pinhole Camera Model Diagram Extrinsic Intrinsic**: A diagram showing the geometry: the focal length, the image plane, and the projection of the 3D world point.  *Image Courtesy*: &lt;cite:&amp;GIMS18&gt;" /></p>
+<p><strong>The Pinhole Model</strong> (Fig.&nbsp;<ref:fig:pinhole>)</p>
+<p>The fundamental geometric model for any camera is the
+<strong>Pinhole Camera Model</strong>.  It simplifies the complex
+optics of a lens to a single aperture, or pinhole,
+which projects a 3D point <span class="arithmatex">\((X, Y, Z)\)</span> onto a 2D image
+plane <span class="arithmatex">\((x, y)\)</span>.</p>
+<p>Using homogeneous coordinates, this transformation can
+be concisely expressed as a matrix multiplication:</p>
+<div class="arithmatex">\[s \mathbf{p} = \mathbf{K} [\mathbf{R} | \mathbf{t}]
+\mathbf{P}\]</div>
+<ul>
+<li><span class="arithmatex">\(\mathbf{P} \equiv \begin{bmatrix}X &amp; Y &amp; Z &amp;
+      1\end{bmatrix}^T\)</span> is the 3D point in world
+    coordinates.</li>
+<li><span class="arithmatex">\(\mathbf{p} \equiv \begin{bmatrix} x &amp; y &amp; 1
+      \end{bmatrix}^T\)</span> is the homogeneous counterpart of 2D
+    point <span class="arithmatex">\((x, y)\)</span> in image coordinates (projected to
+    3D).</li>
+<li><span class="arithmatex">\(s\)</span> is an arbitrary scale factor (often <span class="arithmatex">\(=Z\)</span>, <em>i.e.</em>
+    the depth).</li>
+<li><span class="arithmatex">\([\mathbf{R} | \mathbf{t}]\)</span> is the <strong>Extrinsic
+    Parameter Matrix</strong> (a <span class="arithmatex">\(3 \times 4\)</span> matrix combining a
+    <span class="arithmatex">\(3 \times 3\)</span> rotation matrix <span class="arithmatex">\(\mathbf{R}\)</span> and a <span class="arithmatex">\(3
+      \times 1\)</span> translation vector <span class="arithmatex">\(\mathbf{t}\)</span>).  This
+    defines the camera's position and orientation
+    relative to the world coordinate system.</li>
+<li><span class="arithmatex">\(\mathbf{K}\)</span> is the <strong>Intrinsic Parameter Matrix</strong> (a
+    <span class="arithmatex">\(3 \times 3\)</span> upper-triangular matrix), which maps
+    normalized camera coordinates to pixel coordinates.
+    It depends on focal lengths (<span class="arithmatex">\(f_x, f_y\)</span>) and the
+    principal point (<span class="arithmatex">\(c_x, c_y\)</span>).</li>
+</ul>
+<p>This model formalizes the loss of <em>depth information</em>
+and provides the framework for tasks like 3D
+reconstruction (<strong>Structure from Motion</strong>) and position
+estimation (<strong>Visual Odometry</strong>).</p>
+<p><a id="orgcad2bfb"></a></p>
+<h3 id="camera-tracking">Camera Tracking</h3>
+<ul>
+<li>Calibration and registration are fundamental
+    processes in AR.</li>
+<li>Calibration aligns the camera <em>w.r.t.</em> the real
+    world.</li>
+<li>Registration aligns digital content <em>w.r.t.</em> the
+    camera.</li>
+<li>Without proper calibration and registration, virtual
+    objects would appear to float, jitter, or be
+    incorrectly scaled, breaking the immersive illusion
+    of AR.</li>
+</ul>
+<p><a id="orgdcd0597"></a></p>
+<h4 id="calibration">Calibration</h4>
+<p>Determine the camera properties,</p>
+<ul>
+<li>Intrinsic Params<ul>
+<li>Focal length <span class="arithmatex">\((f_x, f_y)\)</span></li>
+<li>Principal point <span class="arithmatex">\((c_x, c_y)\)</span></li>
+<li>Skew coefficient : typically assumed to be zero.</li>
+<li>Distortion coefficients <span class="arithmatex">\((k_1, k_2, p_1, p_2, k_3,
+        \ldots)\)</span> that account for radial and tangential
+    distortions.</li>
+</ul>
+</li>
+<li>Extrinsic Params (Camera Pose, <em>i.e. its precise
+    position and orientation</em>)<ul>
+<li>Rotation matrix, <span class="arithmatex">\(R\)</span></li>
+<li>Translation vector <span class="arithmatex">\(\mathbf{t}\)</span></li>
+</ul>
+</li>
+</ul>
+<p>(As covered in the geometric model)</p>
+<p><a id="orgcbaf22b"></a></p>
+<h4 id="registration">Registration</h4>
+<p>Align virtual content with the real world in real-time,</p>
+<h5 id="scene-information-extraction">Scene Information Extraction:</h5>
+<ul>
+<li>Feature Detection</li>
+<li>Sensor Fusion</li>
+</ul>
+<h5 id="temporal-correspondence-estimation">Temporal Correspondence Estimation:</h5>
+<ul>
+<li>Correspondence across scene information</li>
+<li>Marker-based AR: Detect markers and establish
+    correspondence</li>
+<li>Markerless/SLAM-based: Use features to establish
+    correspondence.</li>
+</ul>
+<h5 id="pose-estimation-real-time-tracking">Pose Estimation (Real-time tracking)</h5>
+<ul>
+<li>Estimate 6 DoF camera pose using correspondences;</li>
+<li>This is an iterative process of refining the pose
+    as new frames are captured, and new correspondences
+    are established.</li>
+<li>Algorithms used:<ul>
+<li>Perspective and point (PnP)</li>
+<li>Bundle Adjustment</li>
+<li>Filtering techniques (<em>e.g.</em> Kalman filters,
+    particle filters)</li>
+</ul>
+</li>
+</ul>
+<h5 id="virtual-content-overlay">Virtual Content Overlay</h5>
+<ul>
+<li>Based on estimated camera pose, and predefined
+    transformation of virtual content relative to
+    <strong>tracked</strong> real world, virtual content is rendered
+    and projected onto the camera’s view.</li>
+<li>Three key operations, so that the virtual objects
+    appear to be a natural part of physical
+    environment:<ul>
+<li>Estimating geometric transformation (namely
+    perspective, scale and rotation)</li>
+<li>Estimating illumination model;</li>
+<li>Occlusion handling.</li>
+</ul>
+</li>
+</ul>
+<p><a id="orgb5e9e65"></a></p>
+<h4 id="registration-strategies">Registration Strategies</h4>
+<ul>
+<li>Marker-based : Track the marker</li>
+<li>Markerless : Track the natural features</li>
+<li>Model-based : Track the geometric model of the real
+    world</li>
+<li>Location-based : Based on GPS/IMU data, typically, in
+    an outdoor setting.</li>
+</ul>
+<p><a id="orga373cde"></a></p>
+<h4 id="essentially">Essentially</h4>
+<ul>
+<li>Calibration is a one-time (or occasional) process to
+    characterize the camera itself; while</li>
+<li>Registration is the continuous, real-time process, to
+    correctly place virtual objects in the augmented
+    view.</li>
+</ul>
+<p><a id="org9c7d8b5"></a></p>
+<h3 id="references">References</h3>
+<p>\printbibliography[heading=none]</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 11:52:09 UTC">February 10, 2026</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:bvraghav@gmail.com">Raghav B. Venkataramaiyer</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../exercise/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercise">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Exercise
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href='https://bvraghav.com/'>Raghav B. Venkataramaiyer</a> &lt;<code style='color:inherit; background:transparent'>bv.raghav</code>&gt;
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/tiet-unc512/tiet-unc512.github.io" target="_blank" rel="noopener" title="Git Repo for UNC512 Course Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "header.autohide", "content.tabs.link", "navigation.tracking", "navigation.top", "toc.integrate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="../../javascript/arithmatex.js"></script>
+      
+    
+  </body>
+</html>
