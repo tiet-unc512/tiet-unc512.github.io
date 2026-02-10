@@ -1,0 +1,323 @@
+:PROPERTIES:
+:ID:       733ea57e-eb13-4f52-8f97-2e5fa66519ab
+:END:
+#+TITLE: Exercise
+#+SUBTITLE: (The Geometric Model)
+#+AUTHOR: Raghav B. Venkataramaiyer
+#+DATE: Jan '26
+#+options: toc:2 num:2
+
+#+latex_header: \usepackage{parskip}
+
+#+latex_header_extra: \graphicspath{ {./images/} }
+
+# For multiple sub figures.
+#+latex_header_extra: \usepackage[labelformat=simple]{subcaption}
+#+latex_header_extra: \renewcommand\thesubfigure{(\alph{subfigure})}
+
+#+latex_header_extra: \usepackage[date=year,%
+#+latex_header_extra:   backend=biber,%
+#+latex_header_extra:   style=alphabetic,%
+#+latex_header_extra:   maxnames=5,%
+#+latex_header_extra:   minnames=3,%
+#+latex_header_extra:   maxalphanames=4,%
+#+latex_header_extra:   minalphanames=3,%
+#+latex_header_extra:   backref=true,%
+#+latex_header_extra:   doi=false,%
+#+latex_header_extra:   isbn=false,%
+#+latex_header_extra:   url=false,%
+#+latex_header_extra:   eprint=false]{biblatex}
+#+latex_header_extra: \DefineBibliographyStrings{english}{%
+#+latex_header_extra:   backrefpage  = {\lowercase{s}ee p.}, % for single page number
+#+latex_header_extra:   backrefpages = {\lowercase{s}ee pp.} % for multiple page numbers
+#+latex_header_extra: }
+#+latex_header_extra: \addbibresource{/home/bvraghav/bibliography.bib}
+
+#+latex_header_extra: \hypersetup{
+#+latex_header_extra:   colorlinks,
+#+latex_header_extra:   allcolors=.,
+#+latex_header_extra:   urlcolor=blue,
+#+latex_header_extra:   citecolor=gray,
+#+latex_header_extra:   linkcolor=red,
+#+latex_header_extra: }
+
+# For text alignment
+#+latex_header_extra: \usepackage{ragged2e}
+
+# For more robust tables
+#+latex_header_extra: \usepackage{tabularx}
+
+# For line spacing and indentation
+#+latex_header_extra: \usepackage{enumitem}
+#+latex_header_extra: \setlist{noitemsep}
+#+latex_header_extra: \usepackage{parskip}
+
+# For page size
+#+latex_header_extra: \usepackage[a4paper,margin=1.5in]{geometry}
+
+#+md: <style>
+#+md: .bvr-full-height-image-wrapper img {max-height: 30em}
+#+md: </style>
+
+#+md: [:material-file-pdf-box: Download this page as PDF](./exercise.pdf)
+
+* COMMENT Auto Export to Md/Latex on save
+#+begin_src emacs-lisp
+  (setq bvr/mkdocs/hooks-to-update '(after-save-hook))
+  (defun bvr/mkdocs/publish-hook ()
+    (org-latex-export-to-pdf)
+    (org-md-export-to-markdown)
+    (with-current-buffer (find-file-noselect (expand-file-name "exercise.md" default-directory))
+      (save-excursion
+        (goto-char (point-min))
+        ;; (insert "---\ntoc_depth: 2\n---\n\n")
+        (let* ((i 1)
+               (boreg (pos-bol i))
+               (eoreg (pos-eol i))
+               _s)
+          (while (not (eq boreg (point-max)))
+
+            (setq _s (buffer-substring-no-properties boreg (+ 1 boreg)))
+            (when (string= _s "#")
+              (save-excursion (goto-char boreg)
+                              (insert "#")))
+
+            (setq i (+ i 1)
+                  boreg (pos-bol i)
+                  eoreg (pos-eol i)))))
+      (save-buffer)
+      (kill-buffer))
+    )
+  (cl-loop for hook in bvr/mkdocs/hooks-to-update
+           do (add-hook hook
+                        #'bvr/mkdocs/publish-hook
+                        0 t))
+#+end_src
+
+#+RESULTS:
+* Exercises: The Geometric Model (VR Geometry)
+:PROPERTIES:
+:CUSTOM_ID: exercises-the-geometric-model-vr-geometry
+:END:
+Based on the concepts of 3D modeling, transformations,
+and orientations for Virtual Reality.
+
+#+md: --------------
+
+** Level 1: Easy (Foundational Concepts)
+:PROPERTIES:
+:CUSTOM_ID: level-1-easy-foundational-concepts
+:END:
+1. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+   Define a “Geometric Model” in the context of a
+   Virtual World Generator (VWG). \\   
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   A mathematical description of the shape, size, and
+   position of objects in a 3D virtual space.
+
+2. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+   A point \(P\) is located at \((2, 3, 5)\). If the
+   model is translated by a vector \(t = (1, -1, 2)\),
+   what are the new coordinates of \(P\)? \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   \((2+1, 3-1, 5+2) = (3, 2, 7)\).
+
+3. @@html:**@@@@latex:{\scriptsize@@[SB]@@latex:}@@@@html:**{:.htag}@@
+   Explain why it is common to use triangles (meshes)
+   to represent complex 3D objects instead of
+   higher-order curved surfaces. \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   Triangles are computationally efficient, always
+   planar, and supported by GPU hardware.
+
+4. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+   What are the three standard components of a 3D
+   transformation (often abbreviated as TRS)? \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   Translation, Rotation, and Scale.
+
+5. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+   If a virtual world is defined in \(\mathbb{R}^3\),
+   what is the distance between point \(A(1, 0, 0)\)
+   and point \(B(4, 4, 0)\)? \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   \(\sqrt{(4-1)^2 + (4-0)^2 + (0-0)^2} = 5\).
+
+6. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+   Define the difference between “Global Coordinates”
+   and “Local (Body) Coordinates.” \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   Global: Fixed to world origin. Local: Fixed to the
+   object; moves with it.
+
+7. @@html:**@@@@latex:{\scriptsize@@[SB]@@latex:}@@@@html:**{:.htag}@@
+   In a VR engine, you see an option to “Parent” a
+   sword to a character's hand. Based on geometric
+   modeling, what does this imply about their
+   coordinate systems? \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   The sword's transform is relative to the hand's
+   local coordinate system.
+
+8. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+   Express a translation of 5 units along the x-axis
+   and -3 units along the z-axis as a 3D translation
+   vector. \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   \(t = (5, 0, -3)\).
+
+#+md: --------------
+
+** Level 2: Medium (Transformations & Rotations)
+:PROPERTIES:
+:CUSTOM_ID: level-2-medium-transformations-rotations
+:END:
+9. [@9] @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+   Explain why 2D rotations can be represented by a
+   single angle \(\theta\), whereas 3D rotations
+   require more complex representations (like matrices
+   or quaternions). \\
+   @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+   2D has only one axis; 3D rotations are
+   non-commutative (order matters).
+
+10. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+    Write the \(3 \times 3\) rotation matrix
+    \(R_z(\theta)\) for a rotation of \(90^\circ\)
+    around the Z-axis. \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    \([[0, -1, 0], [1, 0, 0], [0, 0, 1]]\).
+
+11. @@html:**@@@@latex:{\scriptsize@@[SB]@@latex:}@@@@html:**{:.htag}@@
+    Discuss the phenomenon of “Gimbal Lock.” Which
+    rotation representation is most susceptible to it,
+    and why is it a problem for VR head tracking? \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    Euler Angles. Occurs when two axes align, losing a
+    degree of freedom.
+
+12. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+    Apply a \(2 \times 2\) rotation matrix for \(\theta
+    = 45^\circ\) to the 2D point \((1, 0)\). (Hint:
+    \(\cos 45^\circ = \sin 45^\circ =
+    \frac{1}{\sqrt{2}}\)). \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    \((\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})\).
+
+13. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+    What is a “Homogeneous Transformation Matrix,” and
+    what is the primary advantage of using a \(4 \times
+    4\) matrix for 3D transformations? \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    A matrix that allows translation to be treated as a
+    multiplication, simplifying composition.
+
+14. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+    Given a rotation matrix \(R\), prove that its
+    transpose \(R^T\) is equal to its inverse
+    \(R^{-1}\) (the Orthogonality property). \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    \(R \cdot R^T = I\) because rows/columns are
+    orthonormal.
+
+15. @@html:**@@@@latex:{\scriptsize@@[SB]@@latex:}@@@@html:**{:.htag}@@
+    Compare the use of Euler Angles versus Quaternions
+    for interpolating between two camera
+    orientations. Why is one preferred for smooth
+    movement? \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    Quaternions allow for SLERP (Spherical Linear
+    Interpolation), which is smoother.
+
+16. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+    Define “Yaw,” “Pitch,” and “Roll” in the context of
+    an aircraft or a VR headset. \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    Yaw: Y-axis; Pitch: X-axis; Roll: Z-axis.
+
+#+md: --------------
+
+** Level 3: Hard (Advanced Modeling & Kinematics)
+:PROPERTIES:
+:CUSTOM_ID: level-3-hard-advanced-modeling-kinematics
+:END:
+17. [@17] @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+    A camera is located at \((0, 0, 0)\) looking toward
+    the negative Z-axis. An object is at \((0, 0,
+    -10)\). If the camera moves to \((5, 0, 0)\) and
+    rotates \(90^\circ\) around the Y-axis (looking
+    toward the positive X-axis), what are the object's
+    coordinates in the /camera's new local frame/? \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    The object is now at local \((0, 0, 5)\) relative
+    to the new camera orientation.
+
+18. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+    Describe the “Viewing Transformation.” List the
+    steps required to move from a 3D world coordinate
+    to a 2D coordinate on the screen. \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    World \(\rightarrow\) Eye \(\rightarrow\) Canonical
+    View \(\rightarrow\) Screen.
+
+19. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+    Compose a single \(4 \times 4\) homogeneous matrix
+    that first rotates an object \(30^\circ\) around
+    the X-axis and then translates it by \((0, 10,
+    0)\). \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    \(M = T \times R\) (Translation applied after
+    rotation).
+
+20. @@html:**@@@@latex:{\scriptsize@@[SB]@@latex:}@@@@html:**{:.htag}@@
+    If a VR system has high latency in updating the
+    “Geometric Model” relative to the user's head
+    movement, describe the resulting visual artifacts
+    and their impact on the user. \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    “Judder” or latency lag, leading to motion
+    sickness.
+
+21. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+    Explain the concept of “Double Covering” in the
+    context of Unit Quaternions (\(q\) and \(-q\)
+    representing the same rotation). \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    Two points on the 4D hypersphere represent one 3D
+    rotation.
+
+22. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+    Convert the quaternion \(q = ( \cos(\theta/2), 0,
+    0, \sin(\theta/2) )\) back into its equivalent
+    rotation matrix form. \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    Result is the standard \(R_z(\theta)\) matrix.
+
+23. @@html:**@@@@latex:{\scriptsize@@[SB]@@latex:}@@@@html:**{:.htag}@@
+    You are designing a VR “Mirror” where the user sees
+    their avatar. Explain the geometric transformation
+    required to reflect the avatar's movements across a
+    plane \(x = 0\). \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    Reflection matrix where \(x' = -x\).
+
+24. @@html:**@@@@latex:{\scriptsize@@[NM]@@latex:}@@@@html:**{:.htag}@@
+    Calculate the result of rotating point \(v = (1, 0,
+    0)\) by \(180^\circ\) around the Y-axis using the
+    quaternion formula \(v' = qvq^{-1}\). \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    \(v' = (-1, 0, 0)\).
+
+25. @@html:**@@@@latex:{\scriptsize@@[TH]@@latex:}@@@@html:**{:.htag}@@
+    In the “Rendering Pipeline,” explain the role of
+    the “Culling” process. \\
+    @@html:**@@@@latex:{\scriptsize@@[SOL]@@latex:}@@@@html:**{:.htag}@@
+    Removing objects outside the Viewing Frustum to
+    optimize performance.
+
+#+md: --------------
+
+#+md: *[TH]: Theoretical
+#+md: *[NM]: Numerical
+#+md: *[SB]: Subjective
+#+md: *[SOL]: Solution itself or a hint.
