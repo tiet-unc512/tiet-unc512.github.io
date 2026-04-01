@@ -1,0 +1,4 @@
+#+TITLE: The Geometric Model
+
++ [[file:scribe.md][Scribe]]
++ [[file:exercise.md][Exercise]]

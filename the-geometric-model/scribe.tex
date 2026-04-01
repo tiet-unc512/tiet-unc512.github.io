@@ -1,0 +1,693 @@
+% Created 2026-02-10 Tue 12:16
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{parskip}
+\graphicspath{ {./images/} }
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\usepackage[date=year,%
+backend=biber,%
+style=alphabetic,%
+maxnames=5,%
+minnames=3,%
+maxalphanames=4,%
+minalphanames=3,%
+backref=true,%
+doi=false,%
+isbn=false,%
+url=false,%
+eprint=false]{biblatex}
+\DefineBibliographyStrings{english}{%
+backrefpage  = {\lowercase{s}ee p.}, % for single page number
+backrefpages = {\lowercase{s}ee pp.} % for multiple page numbers
+}
+\addbibresource{/home/bvraghav/bibliography.bib}
+\hypersetup{
+colorlinks,
+allcolors=.,
+urlcolor=blue,
+citecolor=gray,
+linkcolor=red,
+}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{parskip}
+\usepackage[a4paper,margin=1.5in]{geometry}
+\setcounter{secnumdepth}{2}
+\author{Raghav B. Venkataramaiyer}
+\date{Jan '26}
+\title{Geometric Model}
+\hypersetup{
+ pdfauthor={Raghav B. Venkataramaiyer},
+ pdftitle={Geometric Model},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section{Geometric Model}
+\label{sec:org599d1bd}
+
+\subsection{Coordinates}
+\label{sec:orga76e2f1}
+
+\subsubsection*{Euclidean Plane}
+\label{sec:orgb482e53}
+A point in \emph{(2-dimensional)} space \emph{(a.k.a. plane)}, is
+defined as
+\begin{align*}
+  \mathbf{p}_i
+  &= \begin{bmatrix} y\\x \end{bmatrix}_i
+    = \begin{bmatrix} y_i\\x_i \end{bmatrix}
+\end{align*}
+
+The vector difference between two points is defined as,
+\begin{align*}
+  \mathbf{p}_i-\mathbf{p}_j
+  &= \begin{bmatrix} y_i-y_j\\x_i-x_j \end{bmatrix}
+\end{align*}
+
+The distance between two points is a \emph{symmetric}
+function of the two points, defined as,
+
+\begin{align*}
+  \delta_{ij}
+  &= \|\mathbf{p}_i-\mathbf{p}_j\|_2
+  \\
+  \delta_{ij}^2 = \delta_{ji}^2
+  &= \|\mathbf{p}_i-\mathbf{p}_j\|_2^2 =
+    (y_i-y_j)^2+(x_i-x_j)^2 
+\end{align*}
+\subsubsection*{Euclidean Space}
+\label{sec:org973c81f}
+
+Extend the understanding to multiple dimensions, and we
+get Euclidean Space,
+
+A point in \emph{(d-dimensional)} space, is defined as
+\begin{align*}
+  \mathbf{p}
+  &=  \begin{bmatrix}p_1\\\vdots\\p_d\end{bmatrix}
+\end{align*}
+
+The vector difference between two points is defined as,
+\begin{align*}
+  \mathbf{p}-\mathbf{q}
+  &= \begin{bmatrix}
+    p_1-q_1 \\ \vdots \\ p_d-q_d
+  \end{bmatrix}
+\end{align*}
+
+The distance between two points is a \emph{symmetric}
+function of the two points, defined as,
+
+\begin{align*}
+  \delta_{pq}
+  &= \|\mathbf{p}-\mathbf{q}\|_2
+  \\
+  \delta_{pq}^2 = \delta_{qp}^2
+  &= \|\mathbf{p}-\mathbf{q}\|_2^2 =
+    (p_1-q_1)^2+\cdots+(p_d-q_d)^2 
+\end{align*}
+\subsubsection*{Polar Coordinates}
+\label{sec:orgc046fef}
+\(\mathbf{p} \equiv (r,\theta)\)
+
+Defined by an origin, a pole, and each point in
+\emph{(2-dimensional)} space is defined by
+\begin{itemize}
+\item \(r\), the distance between the point and origin; and
+\item \(\theta\), the angle between pole and the line joining
+the point and origin.
+\end{itemize}
+\subsubsection*{Spherical Coordinates}
+\label{sec:org689e915}
+\(\mathbf{p} \equiv (r,\theta,\phi)\)
+
+Extend the polar coordinates to three dimensional
+space, we get spherical coordinates.
+\subsubsection*{Geo-spherical Coordinates}
+\label{sec:orgb429790}
+\(\mathbf{p} \equiv (\theta,\phi)\) \\
+\textsc{or} \\
+\(\mathbf{p} \equiv (1,\theta,\phi)\)
+
+Useful when the space is a spherical surface, \emph{e.g.}
+\begin{itemize}
+\item The surface of the earth;
+\item Projection surface \emph{(i.e. where the distance does not
+matter.)}
+\end{itemize}
+
+Assume that for all points in space, \(r\) is constant;
+and hence redundant; and thus a point is expressed only
+in angular coordinates,
+\subsection{Coordinate Systems and Frames of Reference}
+\label{sec:orgaf5a50f}
+
+Another way to define coordinate system is like
+specifying a reference frame.  It's also referred to as
+``space''.  \emph{E.g.}
+
+\begin{itemize}
+\item Earth revolves around the sun.
+
+\begin{align*}
+  \begin{bmatrix} y\\x \end{bmatrix}_t
+  &= \begin{bmatrix} r\sin\omega t\\
+    r\cos\omega t \end{bmatrix}
+\end{align*}
+where, \(\begin{bmatrix} y&x \end{bmatrix}_{t}^{\top}\)
+are Earth's coordinates in ``Sun's space'' or in ``the
+coordinate system with respect to the Sun.''
+
+where, \(\omega\) is the \emph{(uniform)} angular velocity
+of \emph{(centre of the)} earth; \(t\) is time; and that \(r\)
+is a constant \emph{(the earth-to-sun distance)}.
+
+\item The Earth rotates around its axis;
+
+\begin{align*}
+  \begin{bmatrix} y\\x \end{bmatrix}_t
+  &= \begin{bmatrix} r\sin\omega t\\
+    r\cos\omega t \end{bmatrix}
+\end{align*}
+
+where, \(\begin{bmatrix} y&x \end{bmatrix}_{t}^{\top}\)
+are coordinates of Earth's surface in ``Earth Axis'
+space'' or in ``the coordinate system with respect to
+the Earth's Axis.''
+
+where, \(\omega\) is the \emph{(uniform)} angular velocity
+of earth's rotation about it's \emph{(diametric)} axis;
+\(t\) is time; and that \(r\) is a constant \emph{(the
+earth's radius)}.
+\end{itemize}
+\subsection{Linear Transformation}
+\label{sec:org2d59c23}
+From Linear Algebra, \\
+with \(\mathbf{x}\in\mathbb{X}\) \\
+\emph{implicitly read as vector \(\mathbf{x}\) in vector-space
+\(\mathbb{X}\).}
+
+Similarly \(\mathbf{y}\in\mathbb{Y}\), and \\
+a linear map \(A:\mathbb{X}\to\mathbb{Y}\) \\
+\emph{read as \(A\) maps \(\mathbb{X}\) to \(\mathbb{Y}\)} \\
+And \(A\) is a matrix.
+
+Please note that if \(\mathbb{X}\) is \(M\) dimensional and
+\(\mathbb{Y}\) is \(N\) dimensional, then \(A\) is said to be
+\(N\times M\) dimensional, so that,
+
+\begin{align*}
+\mathbf{y} &= A\mathbf{x}
+\end{align*}
+would imply that \(\mathbf{y}\) is a point in
+\(\mathbb{Y}\) corresponding to \(\mathbf{x}\) in
+\(\mathbb{X}\).
+
+This operation is also known as linear transformation.
+\subsection{Geometric Transformation}
+\label{sec:orgc8753e7}
+
+\subsubsection*{Geometric Operations}
+\label{sec:orgdd11aaf}
+
+\begin{enumerate}
+\item Scale
+\item Translate
+\item Rotate
+\item Shear
+\item Project \emph{(or, Projection)}
+\end{enumerate}
+\subsubsection*{Scale}
+\label{sec:orgd70f776}
+
+\begin{align*}
+  \mathbf{y}
+  &= A\mathbf{x} &= \begin{bmatrix}
+    s_1x_1 \\
+    s_2x_2
+  \end{bmatrix} \\
+  A &= \begin{bmatrix}
+    s_1 & 0 \\
+    0 & s_2
+  \end{bmatrix}
+\end{align*}
+\subsubsection*{Rotate}
+\label{sec:org27b870f}
+
+\begin{align*}
+  \mathbf{y}
+  &= A\mathbf{x} &= \begin{bmatrix}
+    x_1\cos\theta - x_2\sin\theta \\
+    x_1\sin\theta + x_2\cos\theta
+  \end{bmatrix} \\
+  A &= \begin{bmatrix}
+    \cos\theta & -\sin\theta \\
+    \sin\theta & \cos\theta
+  \end{bmatrix}
+\end{align*}
+\subsubsection*{Shear}
+\label{sec:org3798b20}
+
+\begin{align*}
+  \mathbf{y} &= A\mathbf{x} &= \begin{bmatrix}
+    x_1+ax_2 \\ x_2
+  \end{bmatrix} \\
+  A &= \begin{bmatrix}
+    1 & a \\ 0 & 1
+  \end{bmatrix}
+\end{align*}
+\subsubsection*{Homogeneous Coordinates}
+\label{sec:org591f8fd}
+
+\def\svgwidth{0.5\linewidth}
+\input{images/RationalBezier2D.pdf_tex}
+
+\(\mathbf{p}_{i}\) represents a ray in space rather than
+a point.
+
+\begin{align*}
+  \mathbf{p}_i &= \begin{bmatrix}
+    \lambda x \\ \lambda y \\ \lambda
+  \end{bmatrix} = \begin{bmatrix}
+    x \\ y \\ 1
+  \end{bmatrix} && \forall \lambda\in\mathbb{R}
+\end{align*}
+\subsubsection*{Advantages of using homogeneous coordinates}
+\label{sec:org33923f6}
+
+From linear algebra, we can represent,
+
+\begin{align*}
+  \mathbf{y} &= A\mathbf{x} \\
+  \text{or, } y_i &= \sum_j a_{ij}x_j
+\end{align*}
+
+But what about the following case?
+\begin{align*}
+  \mathbf{y} &= \mathbf{x} + \mathbf{t}
+\end{align*}
+
+This can be represented as \(\mathbf{y} = A\mathbf{x}\),
+if \(\mathbf{y}\) and \(\mathbf{x}\) are homogeneous
+coordinates.
+
+\emph{(Think about it)}
+\subsubsection*{Translation}
+\label{sec:org162b06e}
+With homogeneous coordinates,
+
+\begin{align*}
+  \mathbf{y} &= A\mathbf{x} &= \begin{bmatrix}
+    x_1 + t_1 \\
+    x_2 + t_2 \\
+    1
+  \end{bmatrix} \\
+  A &= \begin{bmatrix}
+    1&0&t_1 \\ 0&1&t_1 \\ 0&0&1
+  \end{bmatrix}
+\end{align*}
+\subsubsection*{Transformation Matrices With Homogeneous Coordinates}
+\label{sec:org1097ee3}
+
+\begin{itemize}
+\item Scale
+\label{sec:org903627f}
+
+\begin{align*}
+  A &= \begin{bmatrix}
+    s_1 & 0 & 0 \\
+    0 & s_2 & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+\end{align*}
+\item Rotate
+\label{sec:orgce7d08f}
+
+\begin{align*}
+  A &= \begin{bmatrix}
+    \cos\theta & -\sin\theta & 0 \\
+    \sin\theta & \cos\theta & 0 \\
+    0 & 0 & 1
+  \end{bmatrix}
+\end{align*}
+\item Shear
+\label{sec:orga5667e9}
+
+\begin{align*}
+  A &= \begin{bmatrix}
+    1 & a & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1
+  \end{bmatrix}
+\end{align*}
+\end{itemize}
+\subsubsection*{Geometric Transformation in 3-or-more Dims}
+\label{sec:org1b56f5d}
+
+The matrices here represent transformation with
+homogeneous coordinates; 
+\begin{itemize}
+\item Scale
+\label{sec:org0793ee6}
+
+\begin{align*}
+  A &= \begin{bmatrix}
+    s_1 & 0 & \cdots & 0 \\
+    0 & s_2 & \cdots & 0 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & \cdots & 1
+  \end{bmatrix}
+\end{align*}
+\item Translate
+\label{sec:org4f69a6b}
+
+\begin{align*}
+  A &= \begin{bmatrix}
+    1 & 0 & \cdots & t_1 \\
+    0 & 1 & \cdots & t_2 \\
+    \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & \cdots & 1
+  \end{bmatrix}
+      = \begin{bmatrix}
+        I & \mathbf{t} \\
+        \boldsymbol{0}^T & 1
+      \end{bmatrix}
+\end{align*}
+\item Shear
+\label{sec:org10b094d}
+
+\begin{align*}
+  A &= \begin{bmatrix}
+    1 & a_{12} & a_{13} & \cdots & 0 \\
+    0 & 1 & a_{23} & \cdots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & 0 & \cdots & 1
+  \end{bmatrix} = \begin{bmatrix}
+    I+U_0 & \boldsymbol{0} \\
+    \boldsymbol{0}^{\top} & 1
+  \end{bmatrix}
+\end{align*}
+
+where, \(U_{0}\) is an upper triangular matrix with zero
+diagonals.
+\end{itemize}
+\subsubsection*{Advanced Topics}
+\label{sec:org77a85d8}
+
+Projection and Rotation in 3D are considered to be
+advanced topics in Computer Graphics.  The curious
+readers are encouraged to follow the course UCS505 for
+details.
+
+As in practice, the students shall use mature
+libraries, instead, to this effect.
+\subsubsection*{Composing Transforms}
+\label{sec:orgf80b319}
+
+\begin{itemize}
+\item Interpretation
+\label{sec:org5142c66}
+
+A transformation is interpreted as to ``correspond from
+one space to another.''
+\item Example
+\label{sec:org812a174}
+
+Let's consider our solar system.
+
+\begin{enumerate}
+\item A point that sits on the surface of the earth with
+long-lat as \((\theta,\phi)\), is given as:
+
+\begin{align*}
+  \mathbf{p}_e &= \begin{bmatrix}
+    r_e\cos\theta\cos\phi \\
+    r_e\cos\theta\sin\phi \\
+    r_e\sin\theta \\
+    1
+  \end{bmatrix}
+\end{align*}
+
+using homogeneous Cartesian coordinates.
+
+\item The earth rotates around its axis, with a uniform
+angular speed \(\omega_a\).  So in the axis-space, the
+coordinates would be, loosely speaking,
+\(\mathbf{p}_e\) rotated by \(\omega_{a} t\).  And
+formally given as,
+\begin{align*}
+  \mathbf{p}_a &= A_{ae}\mathbf{p}_e \\
+  A_{ae} &= \mathrm{rot}(\omega_a t+\phi_{a,0})
+\end{align*}
+
+\item Similarly in sun-space, 
+\begin{align*}
+  \mathbf{p}_s &= A_{sa}\mathbf{p}_a =
+                 A_{sa}A_{ae}\mathbf{p}_e \\
+  A_{as} &= \mathrm{rot}(\omega_s t+\phi_{s,0})
+\end{align*}
+
+\item Effectively, if \(\mathbf{p}_s = A_{se}\mathbf{p}_e\),
+we have,
+
+\begin{align*}
+  A_{se} &= A_{sa}A_{ae}
+\end{align*}
+
+This method is called (de)composing.
+\end{enumerate}
+\end{itemize}
+\subsection{Model-View-Projection}
+\label{sec:orgffbf5b2}
+
+\begin{itemize}
+\item \textbf{Model Space}
+\label{sec:org1587a2f}
+Continuing with the same example, let's assume that
+``the sun'' is our ``model space.''  And \(A_{se}\) expresses
+a point on the earth's surface in the sun-space.
+\item \textbf{View Space}
+\label{sec:org44089cc}
+We would like to view the system from a point in space
+looking at the solar system so that the view is fully
+captured within a \(60^{\circ}\) field of view.
+
+If the point of view is located at \(\mathbf{p}_c\) in
+\emph{model space}, and the camera is looking at point
+\(\mathbf{p}_v\) in \emph{model space}; we should be able to
+(de)compose the transformation from model-space to
+``view space'' or ``camera space'' as a sequence of
+geometric transformations.
+
+Some practical references to the \texttt{glm::look\_at}
+function:
+\begin{enumerate}
+\item \href{https://gamedev.stackexchange.com/a/189020}{GameDev Stack Exchange}
+\item \href{https://www.geertarien.com/blog/2017/07/30/breakdown-of-the-lookAt-function-in-OpenGL/}{Geert Ariën's Blogpost}
+\item \href{https://morning-flow.com/2023/02/06/the-math-behind-the-lookat-transform/}{Simón's Blogpost}
+\end{enumerate}
+\item \textbf{Projection Space}
+\label{sec:orgcf914cd}
+Depending upon whether the camera is orthogonal or
+perspective, we finally capture the projection of ``the
+scene,'' on an imaginary projection screen kept at
+\(\begin{bmatrix}0&0&1\end{bmatrix}^{\top}\).  This is
+called ``the projection space.''
+\item \textbf{The MVP Transformation}
+\label{sec:org8ea0b85}
+To compute the coordinates of a point on object, say
+\(\mathbf{p}_e\), as projected onto a projection space,
+\(\mathbf{p}_{\pi}\), we compute this as,
+
+\begin{align*}
+  \mathbf{p}_{\pi} &= PVM\mathbf{p}_e
+\end{align*}
+
+where, \\
+\(P\) is the transformation matrix from view space to
+projection space; \\
+\(V\) is the transformation matrix from model space to
+view space; and \\
+\(M\) is the transformation matrix from object space to
+model space.
+\end{itemize}
+\section{Geometric Image Formation}
+\label{sec:org6fe9c6a}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{org-download-images/Image_Formation_and_Digital_Representation/2025-11-15_15-25-09_screenshot.png}
+\caption{\label{fig:pinhole}\textbf{Pinhole Camera Model Diagram Extrinsic Intrinsic}: A diagram showing the geometry: the focal length, the image plane, and the projection of the 3D world point.  \emph{Image Courtesy}: \cite{GIMS18}}
+\end{figure}
+
+
+\textbf{The Pinhole Model} (Fig.~\ref{fig:pinhole})
+
+The fundamental geometric model for any camera is the
+\textbf{Pinhole Camera Model}.  It simplifies the complex
+optics of a lens to a single aperture, or pinhole,
+which projects a 3D point \((X, Y, Z)\) onto a 2D image
+plane \((x, y)\).
+
+Using homogeneous coordinates, this transformation can
+be concisely expressed as a matrix multiplication:
+
+$$s \mathbf{p} = \mathbf{K} [\mathbf{R} | \mathbf{t}]
+\mathbf{P}$$
+
+\begin{itemize}
+\item \(\mathbf{P} \equiv \begin{bmatrix}X & Y & Z &
+  1\end{bmatrix}^T\) is the 3D point in world
+coordinates.
+\item \(\mathbf{p} \equiv \begin{bmatrix} x & y & 1
+  \end{bmatrix}^T\) is the homogeneous counterpart of 2D
+point \((x, y)\) in image coordinates (projected to
+3D).
+\item \(s\) is an arbitrary scale factor (often \(=Z\), \emph{i.e.}
+the depth).
+\item \([\mathbf{R} | \mathbf{t}]\) is the \textbf{Extrinsic
+Parameter Matrix} (a \(3 \times 4\) matrix combining a
+\(3 \times 3\) rotation matrix \(\mathbf{R}\) and a \(3
+  \times 1\) translation vector \(\mathbf{t}\)).  This
+defines the camera's position and orientation
+relative to the world coordinate system.
+\item \(\mathbf{K}\) is the \textbf{Intrinsic Parameter Matrix} (a
+\(3 \times 3\) upper-triangular matrix), which maps
+normalized camera coordinates to pixel coordinates.
+It depends on focal lengths (\(f_x, f_y\)) and the
+principal point (\(c_x, c_y\)).
+\end{itemize}
+
+This model formalizes the loss of \emph{depth information}
+and provides the framework for tasks like 3D
+reconstruction (\textbf{Structure from Motion}) and position
+estimation (\textbf{Visual Odometry}).
+\section{Camera Tracking}
+\label{sec:org3b3c8e7}
+
+\begin{itemize}
+\item Calibration and registration are fundamental
+processes in AR.
+\item Calibration aligns the camera \emph{w.r.t.} the real
+world.
+\item Registration aligns digital content \emph{w.r.t.} the
+camera.
+\item Without proper calibration and registration, virtual
+objects would appear to float, jitter, or be
+incorrectly scaled, breaking the immersive illusion
+of AR.
+\end{itemize}
+\subsection{Calibration}
+\label{sec:orga0655fa}
+Determine the camera properties,
+\begin{itemize}
+\item Intrinsic Params
+\begin{itemize}
+\item Focal length \((f_x, f_y)\)
+\item Principal point \((c_x, c_y)\)
+\item Skew coefficient : typically assumed to be zero.
+\item Distortion coefficients \((k_1, k_2, p_1, p_2, k_3,
+    \ldots)\) that account for radial and tangential
+distortions.
+\end{itemize}
+\item Extrinsic Params (Camera Pose, \emph{i.e. its precise
+position and orientation})
+\begin{itemize}
+\item Rotation matrix, \(R\)
+\item Translation vector \(\mathbf{t}\)
+\end{itemize}
+\end{itemize}
+
+(As covered in the geometric model)
+\subsection{Registration}
+\label{sec:org0e23a87}
+Align virtual content with the real world in real-time,
+\subsubsection*{Scene Information Extraction:}
+\label{sec:orgdc60b61}
+\begin{itemize}
+\item Feature Detection
+\item Sensor Fusion
+\end{itemize}
+\subsubsection*{Temporal Correspondence Estimation:}
+\label{sec:org5d8e316}
+\begin{itemize}
+\item Correspondence across scene information
+\item Marker-based AR: Detect markers and establish
+correspondence
+\item Markerless/SLAM-based: Use features to establish
+correspondence.
+\end{itemize}
+\subsubsection*{Pose Estimation (Real-time tracking)}
+\label{sec:orgcfcafeb}
+\begin{itemize}
+\item Estimate 6 DoF camera pose using correspondences;
+\item This is an iterative process of refining the pose
+as new frames are captured, and new correspondences
+are established.
+\item Algorithms used:
+\begin{itemize}
+\item Perspective and point (PnP)
+\item Bundle Adjustment
+\item Filtering techniques (\emph{e.g.} Kalman filters,
+particle filters)
+\end{itemize}
+\end{itemize}
+\subsubsection*{Virtual Content Overlay}
+\label{sec:org5055eca}
+\begin{itemize}
+\item Based on estimated camera pose, and predefined
+transformation of virtual content relative to
+\textbf{tracked} real world, virtual content is rendered
+and projected onto the camera's view.
+\item Three key operations, so that the virtual objects
+appear to be a natural part of physical
+environment:
+\begin{itemize}
+\item Estimating geometric transformation (namely
+perspective, scale and rotation)
+\item Estimating illumination model;
+\item Occlusion handling.
+\end{itemize}
+\end{itemize}
+\subsection{Registration Strategies}
+\label{sec:orgf4d2020}
+\begin{itemize}
+\item Marker-based : Track the marker
+\item Markerless : Track the natural features
+\item Model-based : Track the geometric model of the real
+world
+\item Location-based : Based on GPS/IMU data, typically, in
+an outdoor setting.
+\end{itemize}
+\subsection{Essentially}
+\label{sec:orgea12da5}
+\begin{itemize}
+\item Calibration is a one-time (or occasional) process to
+characterize the camera itself; while
+\item Registration is the continuous, real-time process, to
+correctly place virtual objects in the augmented
+view.
+\end{itemize}
+\section*{References}
+\label{sec:org6bdbd4f}
+\printbibliography[heading=none]
+\end{document}
