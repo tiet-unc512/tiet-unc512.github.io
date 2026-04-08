@@ -58,6 +58,7 @@ seminar, tentatively scheduled on Mon Apr 20, 3:30 PM.
 ### Resources ###
 
 1. [Project Proposal [HOWTO]][PROPOSAL-HOWTO]{: target="_blank"}
+1. [Report [HOWTO]][REPORT-HOWTO]{: target="_blank"}
 
 ## Semester Exam (Written) ##
 
@@ -285,6 +286,7 @@ The students will be able to:
 
 [L01]: https://docs.google.com/presentation/d/1I1VXZh4eZK2GuRmtKL5ch3Crl3dGhj0EeLquN1-0s9s/edit?usp=sharing "UNC512 L01 Overview, Introduction and Open Problems"
 [PROPOSAL-HOWTO]: https://docs.google.com/document/d/11oCHkJQwGifkDLSH5DMWAUcJIApAidObK_lTBi2-414/edit?usp=sharing
+[REPORT-HOWTO]: https://docs.google.com/document/d/1MeNxL0KqnRh324XNBLGc5wSdJnJAKE8A-D7QhwGt3tU/ "Report Howto"
 [L02-SCRIBE]:
 https://docs.google.com/document/d/1GQHLRgZLlIkAu_dkb73nkd4qNHLfpX-JeQqlGJe-Vwg/edit?usp=sharing "Virtual Reality Input and Output Modalities"
 [L02]: https://docs.google.com/presentation/d/1epW0bQCru42_OiAmDbgMhsuxdlY0XQZcOkpiYMlXNso/edit?usp=sharing "Virtual Reality Input and Output Modalities"
