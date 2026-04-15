@@ -1,0 +1,67 @@
+%% Creator: Inkscape 1.4.3 (0d15f75042, 2025-12-25), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'bipartite-graph.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{651.02380371bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.49349249)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{bipartite-graph.pdf}}%
+    \put(0.06949371,0.40413801){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{1}\end{tabular}}}}%
+    \put(0.2845396,0.40413801){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{2}\end{tabular}}}}%
+    \put(0.49958552,0.40413801){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{3}\end{tabular}}}}%
+    \put(0.71463142,0.40413801){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{4}\end{tabular}}}}%
+    \put(0.92962369,0.4044061){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{5}\end{tabular}}}}%
+    \put(0.17731155,0.0508483){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{A}\end{tabular}}}}%
+    \put(0.39330057,0.0508483){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{B}\end{tabular}}}}%
+    \put(0.60720227,0.0508483){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{C}\end{tabular}}}}%
+    \put(0.82366051,0.0508483){\color[rgb]{1,1,1}\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\textbf{D}\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

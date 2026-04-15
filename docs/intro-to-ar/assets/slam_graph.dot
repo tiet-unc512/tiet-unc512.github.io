@@ -1,0 +1,52 @@
+graph G {
+  // fontname="Helvetica,Arial,sans-serif"
+  // node [fontname="Helvetica,Arial,sans-serif"]
+  // edge [fontname="Helvetica,Arial,sans-serif"]
+  // layout=neato;
+  overlap=false;
+  label="Trivial Factor Graph: 3 Poses, 3 Landmarks";
+  labelloc="t";
+
+  // Variable Nodes: Poses (Circles)
+  node [shape=circle, style=filled, fillcolor=lightblue, width=0.8];
+  x1 [label="Pose x1"];
+  x2 [label="Pose x2"];
+  x3 [label="Pose x3"];
+
+  // Variable Nodes: Landmarks (Circles)
+  node [shape=circle, style=filled, fillcolor=lightyellow, width=0.8];
+  l1 [label="Landmark l1\n(Mug)"];
+  l2 [label="Landmark l2\n(TV)"];
+  l3 [label="Landmark l3\n(Lamp)"];
+
+  // Factor Nodes (Squares)
+  node [shape=square, style=filled, fillcolor=salmon, width=0.3, label=""];
+  
+  // 1. Prior Factor (Anchors the map)
+  prior [xlabel="Prior"];
+  prior -- x1;
+
+  // 2. Odometry Factors (IMU/Motion)
+  f_odom12 [xlabel="Odom 1-2"];
+  f_odom23 [xlabel="Odom 2-3"];
+  x1 -- f_odom12 -- x2;
+  x2 -- f_odom23 -- x3;
+
+  // 3. Landmark Observation Factors (Vision)
+  node [fillcolor=lightgreen, width=0.2];
+  
+  // Pose 1 sees l1, l2
+  f1_l1 -- x1; f1_l1 -- l1;
+  f1_l2 -- x1; f1_l2 -- l2;
+
+  // Pose 2 sees l2, l3
+  f2_l2 -- x2; f2_l2 -- l2;
+  f2_l3 -- x2; f2_l3 -- l3;
+
+  // Pose 3 sees l3, l1 (Loop Closure!)
+  f3_l3 -- x3; f3_l3 -- l3;
+  f3_l1 -- x3; f3_l1 -- l1 [color=red, penwidth=2];
+
+  // Labels for specific factors
+  f3_l1 [xlabel="Loop Closure"];
+}

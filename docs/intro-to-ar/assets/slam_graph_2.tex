@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{dot2texi}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\begin{document}
+
+\section*{Factor Graph Representation of Trivial SLAM}
+This graph represents a 3-pose, 3-landmark SLAM problem. 
+Circles represent \textbf{Variable Nodes} (State) and Squares represent \textbf{Factor Nodes} (Constraints).
+
+\begin{dot2tex}[dot,options=-lneato]
+graph G {
+    rankdir=LR;
+    nodesep=0.5;
+    
+    // Variable Nodes: Poses (Circles)
+    node [shape=circle, style=filled, fillcolor=lightblue];
+    PoseA [label="Pose A"];
+    PoseB [label="Pose B"];
+    PoseC [label="Pose C"];
+
+    // Variable Nodes: Landmarks (Circles)
+    node [shape=circle, style=filled, fillcolor=lightyellow];
+    LandmarkMug [label="Mug"];
+    LandmarkTV [label="TV"];
+    LandmarkLamp [label="Lamp"];
+
+    // Factor Nodes: Motion (Squares)
+    node [shape=square, style=filled, fillcolor=salmon, fixedsize=true, width=0.2, label=""];
+    
+    // Factors connecting Poses (Odometry)
+    PriorFactor [xlabel="Prior"];
+    OdomAB [xlabel="Odom AB"];
+    OdomBC [xlabel="Odom BC"];
+
+    // Wiring Motion
+    PriorFactor -- PoseA;
+    PoseA -- OdomAB -- PoseB;
+    PoseB -- OdomBC -- PoseC;
+
+    // Factor Nodes: Vision (Small Squares)
+    node [shape=square, style=filled, fillcolor=lightgreen, width=0.15];
+
+    // Pose A observations
+    FactAMug -- PoseA; FactAMug -- LandmarkMug;
+    FactATV -- PoseA; FactATV -- LandmarkTV;
+
+    // Pose B observations
+    FactBTV -- PoseB; FactBTV -- LandmarkTV;
+    FactBLamp -- PoseB; FactBLamp -- LandmarkLamp;
+
+    // Pose C observations
+    FactCLamp -- PoseC; FactCLamp -- LandmarkLamp;
+    
+    // The Loop Closure: Pose C seeing the first landmark again
+    FactCMug [fillcolor=red, xlabel="Loop Closure"];
+    FactCMug -- PoseC; 
+    FactCMug -- LandmarkMug [color=red, penwidth=2.0];
+}
+\end{dot2tex}
+
+\end{document}

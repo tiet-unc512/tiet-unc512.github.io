@@ -112,6 +112,9 @@ is subject to the erstwhile institute policy.
    Computation in VR][L04]{: target="_blank" }.
 5. **[EST]**{: .htag} [:simple-googleslides:
    Interactive Techniques in VR][L05]{: target="_blank" }.
+6. **[EST]**{: .htag} [:simple-googledocs:
+   (Scribe)][L06-SCRIBE] [:simple-googleslides:
+   (Slides) Introduction to AR][L06]{: target="_blank"}.
 
 ## Supplementary Course Content ##
 
@@ -287,8 +290,9 @@ The students will be able to:
 [L01]: https://docs.google.com/presentation/d/1I1VXZh4eZK2GuRmtKL5ch3Crl3dGhj0EeLquN1-0s9s/edit?usp=sharing "UNC512 L01 Overview, Introduction and Open Problems"
 [PROPOSAL-HOWTO]: https://docs.google.com/document/d/11oCHkJQwGifkDLSH5DMWAUcJIApAidObK_lTBi2-414/edit?usp=sharing
 [REPORT-HOWTO]: https://docs.google.com/document/d/1MeNxL0KqnRh324XNBLGc5wSdJnJAKE8A-D7QhwGt3tU/ "Report Howto"
-[L02-SCRIBE]:
-https://docs.google.com/document/d/1GQHLRgZLlIkAu_dkb73nkd4qNHLfpX-JeQqlGJe-Vwg/edit?usp=sharing "Virtual Reality Input and Output Modalities"
+[L02-SCRIBE]: https://docs.google.com/document/d/1GQHLRgZLlIkAu_dkb73nkd4qNHLfpX-JeQqlGJe-Vwg/edit?usp=sharing "Virtual Reality Input and Output Modalities"
 [L02]: https://docs.google.com/presentation/d/1epW0bQCru42_OiAmDbgMhsuxdlY0XQZcOkpiYMlXNso/edit?usp=sharing "Virtual Reality Input and Output Modalities"
 [L04]: https://docs.google.com/presentation/d/1QshLcpuOWkoM8eRQIXwgNmEzA6VpQmAFCIheuEh_lek "Visual Computation in VR"
 [L05]: https://docs.google.com/presentation/d/1eQ9rDC6mt3Y1fXnEPlYBg1gmF6cvd9SMAYnf8il2My4 "Interactive Techniques in VR"
+[L06]: https://docs.google.com/presentation/d/18qmet6XNGQn7QREFY-InNTmaNylxSKl_ZizKVpGDjTk "Introduction to AR"
+[L06-SCRIBE]: ./intro-to-ar/scribe/ "Scribe: Intro to AR"
