@@ -1,0 +1,278 @@
+% Created 2026-02-10 Tue 12:20
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{parskip}
+\graphicspath{ {./images/} }
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\usepackage[date=year,%
+backend=biber,%
+style=alphabetic,%
+maxnames=5,%
+minnames=3,%
+maxalphanames=4,%
+minalphanames=3,%
+backref=true,%
+doi=false,%
+isbn=false,%
+url=false,%
+eprint=false]{biblatex}
+\DefineBibliographyStrings{english}{%
+backrefpage  = {\lowercase{s}ee p.}, % for single page number
+backrefpages = {\lowercase{s}ee pp.} % for multiple page numbers
+}
+\addbibresource{/home/bvraghav/bibliography.bib}
+\hypersetup{
+colorlinks,
+allcolors=.,
+urlcolor=blue,
+citecolor=gray,
+linkcolor=red,
+}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\setlist{noitemsep}
+\usepackage{parskip}
+\usepackage[a4paper,margin=1.5in]{geometry}
+\setcounter{secnumdepth}{2}
+\author{Raghav B. Venkataramaiyer}
+\date{Jan '26}
+\title{Exercise\\\medskip
+\large (The Geometric Model)}
+\hypersetup{
+ pdfauthor={Raghav B. Venkataramaiyer},
+ pdftitle={Exercise},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.2 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section{Exercises: The Geometric Model (VR Geometry)}
+\label{exercises-the-geometric-model-vr-geometry}
+Based on the concepts of 3D modeling, transformations,
+and orientations for Virtual Reality.
+\subsection{Level 1: Easy (Foundational Concepts)}
+\label{level-1-easy-foundational-concepts}
+\begin{enumerate}
+\item {\scriptsize{[}TH]}
+Define a ``Geometric Model'' in the context of a
+Virtual World Generator (VWG). \\
+{\scriptsize{[}SOL]}
+A mathematical description of the shape, size, and
+position of objects in a 3D virtual space.
+
+\item {\scriptsize{[}NM]}
+A point \(P\) is located at \((2, 3, 5)\). If the
+model is translated by a vector \(t = (1, -1, 2)\),
+what are the new coordinates of \(P\)? \\
+{\scriptsize{[}SOL]}
+\((2+1, 3-1, 5+2) = (3, 2, 7)\).
+
+\item {\scriptsize{[}SB]}
+Explain why it is common to use triangles (meshes)
+to represent complex 3D objects instead of
+higher-order curved surfaces. \\
+{\scriptsize{[}SOL]}
+Triangles are computationally efficient, always
+planar, and supported by GPU hardware.
+
+\item {\scriptsize{[}TH]}
+What are the three standard components of a 3D
+transformation (often abbreviated as TRS)? \\
+{\scriptsize{[}SOL]}
+Translation, Rotation, and Scale.
+
+\item {\scriptsize{[}NM]}
+If a virtual world is defined in \(\mathbb{R}^3\),
+what is the distance between point \(A(1, 0, 0)\)
+and point \(B(4, 4, 0)\)? \\
+{\scriptsize{[}SOL]}
+\(\sqrt{(4-1)^2 + (4-0)^2 + (0-0)^2} = 5\).
+
+\item {\scriptsize{[}TH]}
+Define the difference between ``Global Coordinates''
+and ``Local (Body) Coordinates.'' \\
+{\scriptsize{[}SOL]}
+Global: Fixed to world origin. Local: Fixed to the
+object; moves with it.
+
+\item {\scriptsize{[}SB]}
+In a VR engine, you see an option to ``Parent'' a
+sword to a character's hand. Based on geometric
+modeling, what does this imply about their
+coordinate systems? \\
+{\scriptsize{[}SOL]}
+The sword's transform is relative to the hand's
+local coordinate system.
+
+\item {\scriptsize{[}NM]}
+Express a translation of 5 units along the x-axis
+and -3 units along the z-axis as a 3D translation
+vector. \\
+{\scriptsize{[}SOL]}
+\(t = (5, 0, -3)\).
+\end{enumerate}
+\subsection{Level 2: Medium (Transformations \& Rotations)}
+\label{level-2-medium-transformations-rotations}
+\begin{enumerate}
+\setcounter{enumi}{8}
+\item {\scriptsize{[}TH]}
+Explain why 2D rotations can be represented by a
+single angle \(\theta\), whereas 3D rotations
+require more complex representations (like matrices
+or quaternions). \\
+{\scriptsize{[}SOL]}
+2D has only one axis; 3D rotations are
+non-commutative (order matters).
+
+\item {\scriptsize{[}NM]}
+Write the \(3 \times 3\) rotation matrix
+\(R_z(\theta)\) for a rotation of \(90^\circ\)
+around the Z-axis. \\
+{\scriptsize{[}SOL]}
+\([[0, -1, 0], [1, 0, 0], [0, 0, 1]]\).
+
+\item {\scriptsize{[}SB]}
+Discuss the phenomenon of ``Gimbal Lock.'' Which
+rotation representation is most susceptible to it,
+and why is it a problem for VR head tracking? \\
+{\scriptsize{[}SOL]}
+Euler Angles. Occurs when two axes align, losing a
+degree of freedom.
+
+\item {\scriptsize{[}NM]}
+Apply a \(2 \times 2\) rotation matrix for \(\theta
+    = 45^\circ\) to the 2D point \((1, 0)\). (Hint:
+\(\cos 45^\circ = \sin 45^\circ =
+    \frac{1}{\sqrt{2}}\)). \\
+{\scriptsize{[}SOL]}
+\((\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}})\).
+
+\item {\scriptsize{[}TH]}
+What is a ``Homogeneous Transformation Matrix,'' and
+what is the primary advantage of using a \(4 \times
+    4\) matrix for 3D transformations? \\
+{\scriptsize{[}SOL]}
+A matrix that allows translation to be treated as a
+multiplication, simplifying composition.
+
+\item {\scriptsize{[}NM]}
+Given a rotation matrix \(R\), prove that its
+transpose \(R^T\) is equal to its inverse
+\(R^{-1}\) (the Orthogonality property). \\
+{\scriptsize{[}SOL]}
+\(R \cdot R^T = I\) because rows/columns are
+orthonormal.
+
+\item {\scriptsize{[}SB]}
+Compare the use of Euler Angles versus Quaternions
+for interpolating between two camera
+orientations. Why is one preferred for smooth
+movement? \\
+{\scriptsize{[}SOL]}
+Quaternions allow for SLERP (Spherical Linear
+Interpolation), which is smoother.
+
+\item {\scriptsize{[}TH]}
+Define ``Yaw,'' ``Pitch,'' and ``Roll'' in the context of
+an aircraft or a VR headset. \\
+{\scriptsize{[}SOL]}
+Yaw: Y-axis; Pitch: X-axis; Roll: Z-axis.
+\end{enumerate}
+\subsection{Level 3: Hard (Advanced Modeling \& Kinematics)}
+\label{level-3-hard-advanced-modeling-kinematics}
+\begin{enumerate}
+\setcounter{enumi}{16}
+\item {\scriptsize{[}NM]}
+A camera is located at \((0, 0, 0)\) looking toward
+the negative Z-axis. An object is at \((0, 0,
+    -10)\). If the camera moves to \((5, 0, 0)\) and
+rotates \(90^\circ\) around the Y-axis (looking
+toward the positive X-axis), what are the object's
+coordinates in the \emph{camera's new local frame}? \\
+{\scriptsize{[}SOL]}
+The object is now at local \((0, 0, 5)\) relative
+to the new camera orientation.
+
+\item {\scriptsize{[}TH]}
+Describe the ``Viewing Transformation.'' List the
+steps required to move from a 3D world coordinate
+to a 2D coordinate on the screen. \\
+{\scriptsize{[}SOL]}
+World \(\rightarrow\) Eye \(\rightarrow\) Canonical
+View \(\rightarrow\) Screen.
+
+\item {\scriptsize{[}NM]}
+Compose a single \(4 \times 4\) homogeneous matrix
+that first rotates an object \(30^\circ\) around
+the X-axis and then translates it by \((0, 10,
+    0)\). \\
+{\scriptsize{[}SOL]}
+\(M = T \times R\) (Translation applied after
+rotation).
+
+\item {\scriptsize{[}SB]}
+If a VR system has high latency in updating the
+``Geometric Model'' relative to the user's head
+movement, describe the resulting visual artifacts
+and their impact on the user. \\
+{\scriptsize{[}SOL]}
+``Judder'' or latency lag, leading to motion
+sickness.
+
+\item {\scriptsize{[}TH]}
+Explain the concept of ``Double Covering'' in the
+context of Unit Quaternions (\(q\) and \(-q\)
+representing the same rotation). \\
+{\scriptsize{[}SOL]}
+Two points on the 4D hypersphere represent one 3D
+rotation.
+
+\item {\scriptsize{[}NM]}
+Convert the quaternion \(q = ( \cos(\theta/2), 0,
+    0, \sin(\theta/2) )\) back into its equivalent
+rotation matrix form. \\
+{\scriptsize{[}SOL]}
+Result is the standard \(R_z(\theta)\) matrix.
+
+\item {\scriptsize{[}SB]}
+You are designing a VR ``Mirror'' where the user sees
+their avatar. Explain the geometric transformation
+required to reflect the avatar's movements across a
+plane \(x = 0\). \\
+{\scriptsize{[}SOL]}
+Reflection matrix where \(x' = -x\).
+
+\item {\scriptsize{[}NM]}
+Calculate the result of rotating point \(v = (1, 0,
+    0)\) by \(180^\circ\) around the Y-axis using the
+quaternion formula \(v' = qvq^{-1}\). \\
+{\scriptsize{[}SOL]}
+\(v' = (-1, 0, 0)\).
+
+\item {\scriptsize{[}TH]}
+In the ``Rendering Pipeline,'' explain the role of
+the ``Culling'' process. \\
+{\scriptsize{[}SOL]}
+Removing objects outside the Viewing Frustum to
+optimize performance.
+\end{enumerate}
+\end{document}

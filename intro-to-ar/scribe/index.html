@@ -1,0 +1,2550 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tiet-unc512.github.io/intro-to-ar/scribe/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../the-geometric-model/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+  <title>UNC512: Augmented and Virtual Reality &bull; Raghav
+    B. Venkataramaiyer @TIET</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2020c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m1%205h-2v4H7v2h4v4h2v-4h4v-2h-4z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#table-of-contents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UNC512: Augmented and Virtual Reality" class="md-header__button md-logo" aria-label="UNC512: Augmented and Virtual Reality" data-md-component="logo">
+      
+  <img src="../../assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UNC512: Augmented and Virtual Reality
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro to ar
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tiet-unc512/tiet-unc512.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-unc512/tiet-unc512.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UNC512: Augmented and Virtual Reality" class="md-nav__button md-logo" aria-label="UNC512: Augmented and Virtual Reality" data-md-component="logo">
+      
+  <img src="../../assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    UNC512: Augmented and Virtual Reality
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tiet-unc512/tiet-unc512.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-unc512/tiet-unc512.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro to ar
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro to ar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-structure-of-augmented-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Structure of Augmented Reality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Structure of Augmented Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Core Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-technologies-in-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Technologies in AR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Technologies in AR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slam-simultaneous-localization-and-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLAM (Simultaneous Localization and Mapping)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computer Vision (CV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-academic-grounding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Academic Grounding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Academic Grounding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematics-the-language-of-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mathematics : The Language of Space
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mathematics : The Language of Space">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matrix-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matrix Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pinhole-camera-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pinhole Camera Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quaternions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quaternions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cs-the-engine-of-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CS : The Engine of Interaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CS : The Engine of Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphics-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphics Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#it-the-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IT : The Infrastructure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IT : The Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edge-computing-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Computing &amp; 5G
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Anchors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ekf-slam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EKF SLAM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EKF SLAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-state-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The State Vector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-motion-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Motion Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Motion Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-the-3d-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining the 3D State
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-transition-function-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Transition Function \(f\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-role-of-the-imu-inertial-measurement-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Role of the IMU (Inertial Measurement Unit)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predicting-uncertainty-the-covariance-growth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predicting Uncertainty (The Covariance Growth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-the-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Note on the Notation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-measurement-projection-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Measurement (Projection Matrix)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D Measurement (Projection Matrix)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-residual-innovation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement Residual (Innovation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-jacobian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement Jacobian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-covariance-innovation-covariance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement Covariance (Innovation Covariance)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurement-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement Update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outlier-rejection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outlier Rejection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-3d-ekf-brittle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why is 3D EKF “brittle?”
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slam-with-factor-graphs-and-optimisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLAM with Factor Graphs and Optimisation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SLAM with Factor Graphs and Optimisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#factor-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factor Graphs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-intuition-a-system-of-springs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Intuition: A system of springs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonlinear-least-squares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nonlinear Least Squares
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-isotropic-assumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Isotropic Assumption
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-in-graph-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background in Graph Theory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background in Graph Theory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a graph?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-mathematical-about-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What’s mathematical about this?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-a-bipartite-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What’s a bipartite graph?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-in-optimisation-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background in Optimisation Theory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Background in Optimisation Theory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quadratic-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quadratic Programming
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauss-newton-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauss-Newton approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#levenberg-marquardt-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Levenberg Marquardt Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CV
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cv-slam-symbiosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The CV-SLAM Symbiosis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-cv-tasks-in-ar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key CV Tasks in AR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key CV Tasks in AR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-recognition-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Recognition &amp; Tracking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-detection-labeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object Detection &amp; Labeling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Segmentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene-understanding-the-physics-of-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scene Understanding: The “Physics” of CV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-frontend-of-the-pipeline-feature-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The “Frontend” of the Pipeline (Feature Extraction)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-the-two-pillars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary: The Two Pillars
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../the-geometric-model/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The geometric model
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    The geometric model
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-geometric-model/exercise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-geometric-model/scribe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scribe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Intro to ar</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#org9e3c0d2">System Structure of Augmented Reality</a><ol>
+<li><a href="#orgc2e395c">The Core Components</a></li>
+</ol>
+</li>
+<li><a href="#org4762e59">Key Technologies in AR</a><ol>
+<li><a href="#org14eef39">SLAM (Simultaneous Localization and Mapping)</a></li>
+<li><a href="#orge6e36a4">Computer Vision (CV)</a></li>
+</ol>
+</li>
+<li><a href="#org2afa0f4">The Academic Grounding</a><ol>
+<li><a href="#orgb773aa3">Mathematics : The Language of Space</a></li>
+<li><a href="#org280099a">CS : The Engine of Interaction</a></li>
+<li><a href="#orgae01a35">IT : The Infrastructure</a></li>
+</ol>
+</li>
+<li><a href="#org4a4fc66">EKF SLAM</a><ol>
+<li><a href="#sec:state-vector">The State Vector</a></li>
+<li><a href="#orgbd78056">The Motion Model</a></li>
+<li><a href="#org0473609">3D Measurement (Projection Matrix)</a></li>
+<li><a href="#sec:measurement-update">Measurement Update</a></li>
+<li><a href="#org599dd8a">Outlier Rejection</a></li>
+<li><a href="#orgba4cac0">Why is 3D EKF “brittle?”</a></li>
+</ol>
+</li>
+<li><a href="#orge753a94">SLAM with Factor Graphs and Optimisation</a><ol>
+<li><a href="#org7968dd9">Introduction</a></li>
+<li><a href="#org6f0c1b2">Background in Graph Theory</a></li>
+<li><a href="#org0610e44">Background in Optimisation Theory</a></li>
+</ol>
+</li>
+<li><a href="#orgcf118cc">CV</a><ol>
+<li><a href="#org809fc16">The CV-SLAM Symbiosis</a></li>
+<li><a href="#orgd2f2384">Key CV Tasks in AR</a></li>
+<li><a href="#org4a5d8ad">Scene Understanding: The “Physics” of CV</a></li>
+<li><a href="#orgc9adc2e">The “Frontend” of the Pipeline (Feature Extraction)</a></li>
+</ol>
+</li>
+<li><a href="#org8d868d4">Summary: The Two Pillars</a></li>
+</ol>
+<style>
+
+.bvr-full-height-image-wrapper img {max-height: 30em}
+
+</style>
+
+<p><a href="../scribe.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> Download this page as PDF</a></p>
+<p>Welcome to the frontier of Augmented Reality (AR).</p>
+<p>Unlike Virtual Reality (VR), which creates a completely
+synthetic environment, AR “augments” the physical world
+by overlaying digital data onto it.</p>
+<p>To understand AR at a professional level, you have to
+look past the filters and games; it is essentially a
+high-speed optimization problem involving geometry,
+optics, and data processing.</p>
+<p><a id="org9e3c0d2"></a></p>
+<h2 id="system-structure-of-augmented-reality">System Structure of Augmented Reality</h2>
+<p>The structure of an AR system is defined by a
+continuous feedback loop between the physical
+environment and the digital processor.</p>
+<p><a id="orgc2e395c"></a></p>
+<h3 id="the-core-components">The Core Components</h3>
+<ul>
+<li><strong>Sensing and Tracking:</strong> The system must “see” the
+    world. This involves hardware (cameras, LIDAR, IMUs)
+    capturing the 3D structure and the user's pose
+    (position and orientation).</li>
+<li><strong>Processing Unit:</strong> The “brain” (CPU/GPU/NPU) that
+    calculates the spatial relationship between the user
+    and the environment.</li>
+<li><strong>Digital Content Generator:</strong> The engine (like Unity
+    or Unreal) that renders the 3D models or data.</li>
+<li><strong>Display/Output:</strong> The medium where the real and
+    virtual worlds merge. This can be <em>Optical
+    See-Through</em> (like HoloLens), <em>Video See-Through</em>
+    (like a smartphone screen), or <em>Spatial AR</em>
+    (projectors).</li>
+</ul>
+<p><a id="org4762e59"></a></p>
+<h2 id="key-technologies-in-ar">Key Technologies in AR</h2>
+<p><a id="org14eef39"></a></p>
+<h3 id="slam-simultaneous-localization-and-mapping">SLAM (Simultaneous Localization and Mapping)</h3>
+<p>This is the “holy grail” of AR. It allows a device to
+build a map of an unknown environment while
+simultaneously keeping track of its own location within
+that map.</p>
+<p><a id="orge6e36a4"></a></p>
+<h3 id="computer-vision-cv">Computer Vision (CV)</h3>
+<p>CV algorithms are used for object recognition, plane
+detection (finding a floor or table), and
+“occlusion”—the ability for a digital object to be
+hidden behind a physical one.</p>
+<p><a id="org2afa0f4"></a></p>
+<h2 id="the-academic-grounding">The Academic Grounding</h2>
+<p><a id="orgb773aa3"></a></p>
+<h3 id="mathematics-the-language-of-space">Mathematics : The Language of Space</h3>
+<p>AR is built on <em>Linear Algebra</em> and <em>Projective
+Geometry</em>. To place a digital teapot on your real desk,
+the system performs coordinate transformations.</p>
+<h4 id="matrix-transformations">Matrix Transformations</h4>
+<p>We use <span class="arithmatex">\(4 \times 4\)</span> matrices to represent rotation,
+translation, and scaling in 3D space</p>
+<p><a id="sec:pin-hole-camera-model"></a></p>
+<h4 id="pinhole-camera-model">Pinhole Camera Model</h4>
+<p>This relates a 3D world point <span class="arithmatex">\(\mathbf{m};
+\mathbf{m}^{\top} \equiv \begin{bmatrix} x &amp; y &amp; z
+\end{bmatrix}\)</span> to a 2D image point
+<span class="arithmatex">\(\overline{\mathbf{z}};
+\overline{\mathbf{z}}^{\top}\equiv \begin{bmatrix} u &amp;
+v \end{bmatrix}\)</span> using a projection function <span class="arithmatex">\(h\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+  \overline{\mathbf{z}}
+  &amp;= h(\mathbf{m}; \boldsymbol{\mu}) \\
+  \exists s \text{ scalar, so that, }\quad
+  s \overline{\mathbf{z}}
+  &amp;= K [R | \mathbf{t}] \begin{bmatrix}
+    \mathbf{m} \\ 1
+  \end{bmatrix}
+\end{align*}\]</div>
+<p>where,</p>
+<ul>
+<li><span class="arithmatex">\(K\)</span> represents intrinsic parameters (focal length,
+    etc.)</li>
+<li><span class="arithmatex">\([R | \mathbf{t}]\)</span> represents extrinsic parameters
+    (rotation and translation) that are computed using
+    the camera pose in parameterised state vector
+    <span class="arithmatex">\(\boldsymbol{\mu}\)</span>.  See also:
+    <ref:sec:state-vector>.</li>
+</ul>
+<h4 id="quaternions">Quaternions</h4>
+<p>Used instead of Euler angles to handle 3D rotations
+without “gimbal lock” and with higher computational
+efficiency.</p>
+<h5 id="cheatsheet">Cheatsheet</h5>
+<p>Quaternions are 4D Complex Numbers.</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{q}
+  &amp;= w + x\imath + y\jmath + zk
+  &amp;&amp;\equiv \begin{bmatrix}
+      w &amp; x &amp; y &amp; z
+  \end{bmatrix}^{\top} \equiv \begin{bmatrix}
+      w \\ \mathbf{v}
+  \end{bmatrix}
+  \\
+  \|\mathbf{q}\|_F^2
+  &amp;= w^2 + x^2 + y^2 + z^2 = 1
+  &amp;&amp; \text{Unit Quaternion for rotation.}
+  \\
+  w
+  &amp;= \cos\frac{\theta}{2} \quad
+    \mathbf{v} = \sin\frac\theta2 \mathbf{u}
+  &amp;&amp; \text{Rotation by } \theta \text{ around unit
+     vector } \mathbf{u}.
+  \\
+  \imath\jmath k
+  &amp;= \imath^2 = \jmath^2 = k^2 = -1
+  &amp;&amp; \text{Quaternion multiplication rules.}
+  \\
+  \mathbf{q}_{\text{new}}
+  &amp;= \mathbf{q}_1 \otimes \mathbf{q}_2
+  &amp;&amp; \text{Rotation } \mathbf{q}_1 \text{ followed by }
+     \mathbf{q}_2
+\end{align*}\]</div>
+<p>Quaternion to Rotation Matrix:</p>
+<div class="arithmatex">\[\begin{align*}
+  R
+  &amp;= \begin{bmatrix}
+    1 - 2(y^2 + z^2) &amp; 2(xy - wz) &amp; 2(xz + wy) \\
+    2(xy + wz) &amp; 1 - 2(x^2 + z^2) &amp; 2(yz - wx) \\
+    2(xz - wy) &amp; 2(yz + wx) &amp; 1 - 2(x^2 + y^2)
+  \end{bmatrix}
+\end{align*}\]</div>
+<h5 id="advantages">Advantages</h5>
+<p>One might wonder why we don't just optimize the 9
+numbers in the <span class="arithmatex">\(3 \times 3\)</span> matrix directly in our
+Quadratic Program.</p>
+<ol>
+<li><em>Constraint Satisfaction</em>: A rotation matrix has 9
+    numbers but only 3 “degrees of freedom.”  Keeping a
+    matrix orthogonal during optimization is hard.
+    Keeping a quaternion at unit length is easy (just
+    divide by the norm).</li>
+<li><em>Smoothness</em>: If we need to estimate the camera
+    position between two frames (interpolation),
+    quaternions allow for SLERP (Spherical Linear
+    Interpolation), which creates smooth, realistic
+    motion blur and tracking.</li>
+<li><em>Efficiency</em>: Multiplying two quaternions (combining
+    two rotations) takes only 16 multiplications, while
+    multiplying two <span class="arithmatex">\(3 \times 3\)</span> matrices takes 27.</li>
+</ol>
+<p><a id="org280099a"></a></p>
+<h3 id="cs-the-engine-of-interaction">CS : The Engine of Interaction</h3>
+<p>From a CS perspective, AR is a challenge of latency and
+real-time rendering.</p>
+<h4 id="graphics-pipeline">Graphics Pipeline</h4>
+<p>Understanding how vertices are processed into
+pixels. To maintain immersion, the “motion-to-photon”
+latency must be under 20ms; otherwise, the user
+experiences motion sickness.</p>
+<h4 id="algorithms">Algorithms</h4>
+<p>Spatial indexing (like Octrees or KD-trees) is used to
+quickly calculate collisions between digital objects
+and the physical world map.</p>
+<h4 id="optimization">Optimization</h4>
+<p>Since many AR devices are mobile, code must be highly
+optimized for thermal and battery constraints, often
+moving heavy CV tasks to specialized DSPs (Digital
+Signal Processors).</p>
+<p><a id="orgae01a35"></a></p>
+<h3 id="it-the-infrastructure">IT : The Infrastructure</h3>
+<p>AR doesn't exist in a vacuum; it requires a robust IT
+backbone to function at scale.</p>
+<h4 id="edge-computing-5g">Edge Computing &amp; 5G</h4>
+<p>Rendering complex 3D models can be too taxing for a
+headset.  IT infrastructure uses “Edge” servers to do
+the heavy lifting and beam the frames back via
+low-latency 5G.</p>
+<h4 id="cloud-anchors">Cloud Anchors</h4>
+<p>This allows “persistent AR.”  If I leave a digital note
+on a wall, IT protocols ensure that when you walk by an
+hour later, your device retrieves that specific spatial
+data from the cloud and renders the note in the exact
+same spot.</p>
+<h4 id="data-security">Data Security</h4>
+<p>AR devices are essentially “roving surveillance” tools,
+capturing constant video and spatial maps. The IT
+challenge is securing this “Spatial Data” to protect
+user privacy.</p>
+<p><a id="org4a4fc66"></a></p>
+<h2 id="ekf-slam">EKF SLAM</h2>
+<p>Simultaneous Localisation and Mapping <br />
+with Extended Kalman Filter.</p>
+<p>At its core, SLAM is a “chicken-and-egg” problem:</p>
+<ul>
+<li>to map the environment, we need to know the location;</li>
+<li>to know the location, we need a map.</li>
+</ul>
+<p>We resolve this using state estimation.  The system
+maintains a <em>Gaussian distribution</em> over the state.
+That is to say that it isn’t just a single point, but a
+stochastic entity, with</p>
+<ul>
+<li>mean vector <span class="arithmatex">\(\boldsymbol{\mu}\)</span> (where we think we
+    are), and</li>
+<li>a covariance matrix <span class="arithmatex">\(\Sigma\)</span> (how uncertain we are).</li>
+</ul>
+<p>The <em>Extended Kalman Filter</em> (EKF) was historically the
+standard for SLAM.  It treats the problem as a series
+of predictions and corrections.</p>
+<ul>
+<li><strong>Prediction Step:</strong> Uses a motion model to guess the
+    new state based on sensors like accelerometers.</li>
+<li><strong>Correction Step:</strong> Uses a measurement model to
+    compare what the camera sees vs. what it expected to
+    see based on the map.</li>
+</ul>
+<p>Because the real world is non-linear (rotations involve
+sines and cosines), we use the Jacobian matrix <span class="arithmatex">\(H\)</span> to
+linearize these functions at the current estimate.  The
+Jacobian represents the partial derivatives of the
+frame with respect to the state:</p>
+<div class="arithmatex">\[\begin{align*}
+  H &amp;= \frac{\partial \mathbf{z}} {\partial
+      \boldsymbol{\mu}}
+\end{align*}\]</div>
+<p><a id="sec:state-vector"></a></p>
+<h3 id="the-state-vector">The State Vector</h3>
+<p>In SLAM, we define a state vector <span class="arithmatex">\(\boldsymbol{\mu}_t\)</span>
+that contains both the robot’s pose, <em>i.e.</em> position
+<span class="arithmatex">\(\mathbf{p}; \mathbf{p}^{\top} \equiv \begin{bmatrix} x
+&amp; y &amp; z \end{bmatrix}\)</span>
+ plus orientation quaternion
+<span class="arithmatex">\(\mathbf{q}; \mathbf{q}^{\top} \equiv \begin{bmatrix}
+q_w&amp;q_x&amp;q_y&amp;q_z \end{bmatrix}\)</span>; and the coordinates of
+all landmarks <span class="arithmatex">\(\{\mathbf{m}_1, \mathbf{m}_2, \dots, \mathbf{m}_n\}\)</span> discovered so
+far:</p>
+<div class="arithmatex">\[\begin{align*}
+  \boldsymbol{\mu}_t
+  &amp;= \left[ \underbrace{x, y, z,
+q_w, q_x, q_y, q_z}_{\text{Camera Pose}},
+\underbrace{m_{1,x}, m_{1,y}, m_{1,z}, \dots,
+m_{n,z}}_{\text{Map Landmarks}} \right]^{\top}
+\end{align*}\]</div>
+<p>A 3D AR camera gives us a 2D projection <span class="arithmatex">\(\mathbf{z};
+\mathbf{z}^{\top} \equiv \begin{bmatrix} u &amp; v
+\end{bmatrix}\)</span> of a 3D landmark <span class="arithmatex">\(\mathbf{m};
+\mathbf{m}^{\top} \equiv \begin{bmatrix} m_x&amp;m_y&amp;m_z
+\end{bmatrix}\)</span>.  Also, typically, the device has an
+Inertial Measurement Unit (IMU).  We use the integrated
+accelerations and angular velocities as the control
+input <span class="arithmatex">\(\mathbf{u}\)</span>.</p>
+<p>The goal is to find the posterior probability of the
+state given all observations <span class="arithmatex">\(\mathbf{z}\)</span> and control
+inputs <span class="arithmatex">\(\mathbf{u}\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+  P \left(\boldsymbol{\mu}_t | \mathbf{z}_{1:t},
+  \mathbf{u}_{1:t} \right)
+\end{align*}\]</div>
+<p><a id="orgbd78056"></a></p>
+<h3 id="the-motion-model">The Motion Model</h3>
+<p>In this section, we shall discuss the prediction of
+camera pose using newtonian physics.</p>
+<p>In a 3D AR system, the <em>Motion Model</em> is the
+mathematical “prophet.” It predicts where the device
+will be in the next millisecond before the sensors even
+have a chance to confirm it.</p>
+<p>When we move a smartphone or headset, the prediction
+model handles two distinct types of data:
+<em>Deterministic change</em> (the physics of movement) and
+<em>Stochastic noise</em> (the “jitter” or uncertainty of that
+movement).</p>
+<h4 id="defining-the-3d-state">Defining the 3D State</h4>
+<p>For the sake of clarity, we augment the camera pose
+<span class="arithmatex">\(\mathbf{x}\)</span> with the velocity <span class="arithmatex">\(\mathbf{v}\)</span> and angular
+velocity <span class="arithmatex">\(\boldsymbol{\omega}\)</span> terms, so that
+<span class="arithmatex">\(\mathbf{x}_t^{\top} \equiv \begin{bmatrix}
+\mathbf{p}_t &amp; \mathbf{q}_t &amp; \mathbf{v}_t &amp;
+\boldsymbol{\omega}_t \end{bmatrix}\)</span>.</p>
+<h4 id="state-transition-function-f">State Transition Function <span class="arithmatex">\(f\)</span></h4>
+<p><em>Constant Velocity (or Acceleration) Model</em>: Most AR
+systems use a Constant Velocity or Constant
+Acceleration model, <em>i.e.</em> between time <span class="arithmatex">\(t-1\)</span> and time
+<span class="arithmatex">\(t\)</span>, the device continues its current trajectory unless
+a force (user) changes it.</p>
+<h5 id="the-linear-translation">The Linear Translation</h5>
+<p>follows Newtonian physics (&tau; is clock time):</p>
+<div class="arithmatex">\[\begin{align*}
+  \overline{\mathbf{p}}_t
+  &amp;= \mathbf{p}_{t-1} + \mathbf{v}_{t-1} \Delta \tau +
+    \frac{1}{2} \mathbf{a}_{t-1} (\Delta \tau)^2
+\end{align*}\]</div>
+<h5 id="the-rotational-update">The Rotational Update</h5>
+<p>Recall quaternion rotations aren’t additive; they are
+multiplicative.  To predict the new orientation
+<span class="arithmatex">\(\mathbf{q}_t\)</span>, we multiply the previous orientation by
+a “rotation delta” derived from the angular velocity
+<span class="arithmatex">\(\boldsymbol{\omega}\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+  \overline{\mathbf{q}}_t &amp;= \mathbf{q}_{t-1} \otimes
+                 \boldsymbol{\omega}_{t-1} \Delta \tau
+\end{align*}\]</div>
+<p><span class="arithmatex">\(\otimes\)</span> <em>denotes quaternion multiplication.</em></p>
+<h5 id="the-function-f">The function <span class="arithmatex">\(f\)</span>:</h5>
+<p>The notation <span class="arithmatex">\(f\)</span> has not been explicitly defined here.
+However, it is implied that the transition of camera
+pose, as defined using the estimates of position and
+rotation, put together constitute the state transition
+function <span class="arithmatex">\(f\)</span>.</p>
+<p><em>E.g.</em> To compute the Jacobian, <span class="arithmatex">\(J_t = \partial
+f/\partial \boldsymbol{\mu}_{t-1}\)</span>, we fill the matrix
+per element, <em>i.e.</em> <span class="arithmatex">\(\partial \overline{x}_t/\partial
+x_{t-1} = 1\)</span>  and so forth.</p>
+<h4 id="the-role-of-the-imu-inertial-measurement-unit">The Role of the IMU (Inertial Measurement Unit)</h4>
+<p>In Information Technology and CS implementation, we
+don’t just “guess” the velocity. We use <em>High-Frequency
+Ded-Reckoning</em> (Deduced Reckoning).</p>
+<ul>
+<li>Cameras usually run at 30–60 Hz (slow).</li>
+<li>IMUs (Accelerometers/Gyroscopes) run at 1000 Hz+
+    (fast).</li>
+</ul>
+<p>The motion model uses the IMU to “fill in the gaps.” If
+the camera hasn’t processed a new frame yet, the EKF
+uses the IMU’s high-speed data to integrate the motion
+and update the predicted state.  This is an attempt to
+ensure that when a user turns his/her head, the digital
+AR object stays “pinned” to the real world without
+lagging.</p>
+<h4 id="predicting-uncertainty-the-covariance-growth">Predicting Uncertainty (The Covariance Growth)</h4>
+<p>This is the “Math” that makes EKF work.  Every time we
+predict a new position, we admit we might be wrong.  We
+propagate the uncertainty matrix <span class="arithmatex">\(\Sigma\)</span> using the
+Process Noise matrix <span class="arithmatex">\(Q\)</span>.</p>
+<div class="arithmatex">\[\begin{align*}
+  \overline{\Sigma}_t
+  &amp;= F_t \Sigma_{t-1} F_t^{\top} + Q_t
+\end{align*}\]</div>
+<ul>
+<li><strong><span class="arithmatex">\(F_t\)</span>, The State Transition Jacobian:</strong> Computed as
+    <span class="arithmatex">\(F_{t} = (\partial f/\partial
+      \boldsymbol{\mu}_{t-1})\)</span>.  This matrix describes how
+    a small error in the previous velocity leads to a
+    large error in the current position over time.</li>
+<li><strong><span class="arithmatex">\(Q_t\)</span>, Process Noise:</strong> This represents “unmodeled”
+    events, like a sudden twitch of the user's hand or
+    vibrations.</li>
+</ul>
+<p><em>Why this matters for AR?</em></p>
+<p>If you walk 10 metres without the camera seeing any
+recognizable 3D landmarks, the “prediction” continues,
+but <em>the uncertainty ellipsoids</em> (the “bubbles” of
+where you might be) grow larger and larger. This is
+known as <em>Drift</em>.</p>
+<p>Mathematically, the system is waiting for a
+<em>Measurement Update</em> (seeing a landmark;
+<ref:sec:measurement-update>) to “collapse”
+those bubbles back down to a precise point.</p>
+<h4 id="a-note-on-the-notation">A Note on the Notation</h4>
+<p>There’s a bar over predicted values uncertainty
+<span class="arithmatex">\(\overline{\Sigma}_{t}\)</span>, position
+<span class="arithmatex">\(\overline{\mathbf{p}}_t\)</span>, and rotation
+<span class="arithmatex">\(\overline{\mathbf{q}}_t\)</span>.  The bar signifies the “a
+priori” (before the fact) estimate.  It represents the
+system's state of knowledge <em>after</em> the motion model
+has been applied but <em>before</em> the sensor (camera) has
+looked at the world.  This is a standard mathematical
+notation used to distinguish between a prediction and a
+correction, in the context of the <em>EKF SLAM</em>.</p>
+<p>Once the camera captures a landmark and performs the
+<em>Correction Step</em>, the bar is dropped.  And, <span class="arithmatex">\(\Sigma_t\)</span>
+(without the bar) represents the “a posteriori” (after
+the fact) estimate.</p>
+<p>The lifecycle of the covariance matrix in one AR frame
+looks like this:</p>
+<ol>
+<li><span class="arithmatex">\(\Sigma_{t-1}\)</span>: Where we were at the end of the last
+    frame (confident)</li>
+<li><span class="arithmatex">\(\overline{\Sigma}_{t}\)</span>: Where we think we are after
+    moving (less confident/higher uncertainty).</li>
+<li><span class="arithmatex">\(\Sigma_t\)</span>: Where we actually are after seeing a
+    landmark (confident again).</li>
+</ol>
+<p>And so forth for position <span class="arithmatex">\(\mathbf{p}\)</span>, and rotation
+<span class="arithmatex">\(\mathbf{q}\)</span>.</p>
+<p><a id="org0473609"></a></p>
+<h3 id="3d-measurement-projection-matrix">3D Measurement (Projection Matrix)</h3>
+<p>Recall the Pinhole Camera Model
+<ref:sec:pin-hole-camera-model>.  We had
+defined a projection function
+<span class="arithmatex">\(h(\,\cdot\,;\boldsymbol{\mu})\)</span> parameterised by the
+state vector, to compute the projection of a 3D point
+in our geometric model onto the camera image space.</p>
+<h4 id="measurement-residual-innovation">Measurement Residual (Innovation)</h4>
+<p>The core of the 3D measurement step isn’t just knowing
+where a point projects, but calculating the Innovation
+<span class="arithmatex">\(\mathbf{y}_t\)</span>. This is the “error signal” that drives
+the filter:</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathbf{y}_{i,t}
+  &amp;= \mathbf{z}_{i,t} - h(\overline{\mathbf{m}}_{i,t};
+    \overline{\boldsymbol{\mu}}_t)
+  &amp;&amp; \text{\ldots individual points.} \\
+  Y_t
+  &amp;= Z_t - h(\overline{\boldsymbol{\mu}}_t)
+  &amp;&amp; \text{\ldots all points stacked.}
+\end{align*}\]</div>
+<p>In AR, if <span class="arithmatex">\(\mathbf{z}_{i,t}\)</span> is the actual location of
+a corner on the screen, and
+<span class="arithmatex">\(h(\overline{\mathbf{m}}_{i,t}; \bar{\mu}_t)\)</span> is where
+the model thought that corner should be,
+<span class="arithmatex">\(\mathbf{y}_{i,t}\)</span> is a 2D vector in pixel space.</p>
+<h4 id="measurement-jacobian">Measurement Jacobian</h4>
+<div class="arithmatex">\[\begin{align*}
+  H
+  &amp;= \frac {\partial \text{(2D pixels on screen)}}
+    {\partial \text{(3D landmarks in state)}} \\
+  H_t
+  &amp;= \left. \frac {\partial h} {\partial
+    \boldsymbol{\mu}} \right\vert_{\boldsymbol{\mu} =
+    \boldsymbol{\mu}_t}
+\end{align*}\]</div>
+<h4 id="measurement-covariance-innovation-covariance">Measurement Covariance (Innovation Covariance)</h4>
+<p>Similar to covariance growth, we apply the measurement
+jacobian <span class="arithmatex">\(H_t = \partial h/\partial
+\overline{\boldsymbol{\mu}}_{t}\)</span> and add sensor noise
+<span class="arithmatex">\(R_t\)</span> to compute the innovation covariance.</p>
+<div class="arithmatex">\[\begin{align*}
+  S_{t}
+  &amp;= H_t\overline{\Sigma}_tH_t^{\top} + R_t
+\end{align*}\]</div>
+<p>where,</p>
+<ul>
+<li><span class="arithmatex">\(H_t\)</span> (The Jacobian) : This maps our 3D uncertainty
+    into 2D pixel uncertainty;</li>
+<li><span class="arithmatex">\(R_t\)</span> (Sensor Noise) : This is the inherent “jitter”
+    in the camera’s CMOS sensor, (or the sub pixel error
+    of the feature detector).</li>
+</ul>
+<p>Mathematically, <span class="arithmatex">\(S_t\)</span> represents the total uncertainty
+of the measurement. If <span class="arithmatex">\(S_t\)</span> is large, the system knows
+the measurement is unreliable.</p>
+<p><a id="sec:measurement-update"></a></p>
+<h3 id="measurement-update">Measurement Update</h3>
+<div class="arithmatex">\[\begin{align*}
+  \boldsymbol{\mu}_t
+  &amp;= \overline{\boldsymbol{\mu}}_t + K_t Y_t
+  &amp;&amp; \text{\ldots Camera Pose and Map Update.} \\
+  \Sigma_t
+  &amp;= (I-K_tH_t)\overline{\Sigma}_t
+  &amp;&amp; \text{\ldots Covariance Collapse.}\\
+  K_t
+  &amp;= \overline{\Sigma}_t H_t^{\top} S_t^{-1}
+  &amp;&amp; \text{\ldots Kalman Gain.}
+\end{align*}\]</div>
+<p>Let’s recap here, we have computed,</p>
+<ul>
+<li><span class="arithmatex">\(\overline{\boldsymbol{\mu}}\)</span>, the predicted pose,</li>
+<li><span class="arithmatex">\(\overline{\Sigma}\)</span>, the uncertainty in pose,</li>
+<li><span class="arithmatex">\(Y\)</span> the residual, which may also be interpreted as
+    correction vector,</li>
+<li><span class="arithmatex">\(H\)</span>, the sensitivity: Defines how much a change in
+    your 3D position <em>actually</em> shows up on the sensor,</li>
+</ul>
+<p>So we define, <br />
+<span class="arithmatex">\(K\)</span>, a trust factor: <em>i.e.</em> how much of that visual
+change we <em>actually</em> believe; and this is known as
+“Kalman Gain.”  In some sense, this is analogous to
+<em>information gain</em> (as in information theory.)</p>
+<p>The update in state vector is straight forward,</p>
+<div class="arithmatex">\[\begin{align*}
+\underbrace{\boldsymbol{\mu}}_{\substack{\text{Corrected}
+  \\ \text{State}}}
+&amp;= \underbrace{\overline{\boldsymbol{\mu}}}_{\substack{
+  \text{Predicted} \\ \text{State}}} +
+  \underbrace{K}_{\text{Trust}} \;
+  \underbrace{Y}_{\substack{\text{Correction} \\
+  \text{Vector}}}
+\end{align*}\]</div>
+<p>In case of covariance collapse we’ll look up to
+information theory for our intuition.  In Information
+Theory, <em>Entropy</em> (uncertainty) is reduced by
+<em>Information</em>.  The “1” represents the total
+uncertainty, a moment ago <span class="arithmatex">\((100\%)\)</span>.  The <span class="arithmatex">\(KH\)</span>
+represents the slice of that uncertainty that has been
+“explained away” or “resolved” by the camera looking at
+the landmark.</p>
+<p>Effectively, <span class="arithmatex">\((I-KH)\)</span> acts as a “Certainty Multiplier”
+that’s always between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span>.</p>
+<p><a id="org599dd8a"></a></p>
+<h3 id="outlier-rejection">Outlier Rejection</h3>
+<p>In a real-world IT implementation, we add a “gate”
+before the correction happens. If the innovation
+<span class="arithmatex">\(\mathbf{y}_t\)</span> is too large, it might be a false match
+(<em>e.g,</em> the camera mistook a speck of dust for a known
+landmark).  The system uses the <strong>Mahalanobis Distance</strong>:</p>
+<div class="arithmatex">\[\begin{align*}
+  d^2
+  &amp;= \mathbf{y}_t^{\top} S_t^{-1} \mathbf{y}_t
+\end{align*}\]</div>
+<p>If <span class="arithmatex">\(d^2\)</span> exceeds a certain threshold (usually based on
+a <span class="arithmatex">\(\chi^2\)</span> distribution), the IT layer discards the
+measurement entirely to prevent the 3D map from being
+corrupted by “garbage data.”</p>
+<p><a id="orgba4cac0"></a></p>
+<h3 id="why-is-3d-ekf-brittle">Why is 3D EKF “brittle?”</h3>
+<p>In a 3D environment, the number of landmarks grows
+exponentially. A single room might have 500 “feature
+points” (corners of tables, patterns on rugs).</p>
+<ul>
+<li><strong>The Matrix Problem:</strong> Since the Covariance Matrix
+    <span class="arithmatex">\(\Sigma\)</span> is <span class="arithmatex">\((7+3n)\times(7+3n)\)</span>, having 500
+    landmarks results in a matrix with over 2.25 million
+    elements.</li>
+<li><strong>The Inversion:</strong> The EKF requires inverting a matrix
+    during the Kalman Gain calculation. Doing this at 60
+    frames per second on a mobile processor is
+    mathematically exhausting.</li>
+</ul>
+<p><strong>The IT/CS Solution</strong>: To maintain 3D consistency
+without crashing the processor, modern AR uses “Local
+Bundle Adjustment.”  Instead of a global EKF for the
+whole building, it only runs the intense optimization
+on a “sliding window” of the most recent 10–20 camera
+frames and the landmarks visible within them.</p>
+<p><a id="orge753a94"></a></p>
+<h2 id="slam-with-factor-graphs-and-optimisation">SLAM with Factor Graphs and Optimisation</h2>
+<p>Modern AR (like ARKit or ARCore) usually moves away
+from EKF in favor of Graph-Based SLAM or Bundle
+Adjustment.</p>
+<p>Factor Graphs represent a shift from the
+“moment-to-moment” filter (like the EKF) to a more
+“global” optimization approach.  While an EKF only
+remembers the “now” (<span class="arithmatex">\(\boldsymbol{\mu}_t\)</span>), a Factor
+Graph remembers the entire history of the trajectory
+and all landmark observations.</p>
+<p><a id="org7968dd9"></a></p>
+<h3 id="introduction">Introduction</h3>
+<h4 id="factor-graphs">Factor Graphs</h4>
+<p>A Factor Graph is a Bipartite Graph used to represent
+the mathematical structure of a SLAM problem.  It
+consists of two types of nodes:</p>
+<ul>
+<li><strong>Variable Nodes (Circles):</strong> These represent the
+    things we want to estimate, such as the camera poses
+    <span class="arithmatex">\(\{\mathbf{x}_0, \mathbf{x}_1, \dots, \mathbf{x}_n\}\)</span>
+    and the landmark positions <span class="arithmatex">\(\{\mathbf{m}_1,
+      \mathbf{m}_2, \dots, \mathbf{m}_m\}\)</span>.</li>
+<li><strong>Factor Nodes (Squares):</strong> These represent constraints
+    or measurements.  They connect the variables and
+    define the mathematical relationship (and
+    uncertainty) between them.  <em>E.g.</em> the factor node
+    connected to <span class="arithmatex">\(\mathbf{x}_i, \mathbf{m}_j\)</span> would store
+    the detail of the image projection(s)
+    <span class="arithmatex">\(\mathbf{z}_{ij}\)</span> and measurement uncertainty
+    <span class="arithmatex">\(\Sigma_{ij}\)</span>.</li>
+</ul>
+<h4 id="physical-intuition-a-system-of-springs">Physical Intuition: A system of springs</h4>
+<p>Imagine every camera pose and landmark is a physical
+ball.  A Factor is like a spring connecting
+them:</p>
+<ul>
+<li><strong>Odometry Factor:</strong> A spring between two consecutive
+    poses (<span class="arithmatex">\(\mathbf{x}_1\)</span> and <span class="arithmatex">\(\mathbf{x}_2\)</span>).  It says,
+    <em>“The IMU thinks these two balls should be 1 metre
+    apart.”</em></li>
+<li><strong>Landmark Factor:</strong> A spring between a pose
+    (<span class="arithmatex">\(\mathbf{x}_i\)</span>) and a landmark (<span class="arithmatex">\(\mathbf{m}_j\)</span>).  It
+    says, <em>“The camera saw this landmark at this specific
+    angle.”</em></li>
+<li><strong>Prior Factor:</strong> An anchor holding the very first pose
+    (<span class="arithmatex">\(\mathbf{x}_0\)</span>) to the origin.</li>
+</ul>
+<p>The “goal” of the Factor Graph is to find the
+configuration of balls that puts the least amount of
+tension on all the springs combined.</p>
+<p><a id="sec:nonlinear-least-squares"></a></p>
+<h4 id="nonlinear-least-squares">Nonlinear Least Squares</h4>
+<p>We try to minimize the “re-projection error”—the
+difference between where a 3D point is projected on the
+2D screen and where the camera actually detected it.
+This is solved using the <em>Levenberg-Marquardt
+algorithm,</em> which minimizes a cost function
+<span class="arithmatex">\(\mathcal{L}\)</span>:</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathcal{L}
+  &amp;= \sum_{i,j} \lVert \mathbf{z}_i - h(\mathbf{m}_j;
+    \mathbf{x}_i) \rVert_{\Sigma_{ij}}^2
+  &amp;&amp; \text{\ldots individual points} \\
+  &amp;= \lVert Z - h(\boldsymbol{\mu})
+    \rVert_{\boldsymbol{\Sigma}}^2
+  &amp;&amp; \text{\ldots all points stacked}
+\end{align*}\]</div>
+<p>where, <span class="arithmatex">\(h(\mathbf{m}_j; \mathbf{x}_i)\)</span> projects a map
+point <span class="arithmatex">\(\mathbf{m}_j\)</span> into a camera pose <span class="arithmatex">\(\mathbf{x}_i\)</span>.
+And <span class="arithmatex">\(\boldsymbol{\mu}\)</span> is the factor graph (a bipartite
+graph) containing camera poses and landmarks.</p>
+<h5 id="what-does-the-subscript-sigma_ij-mean">What does the subscript <span class="arithmatex">\(\Sigma_{ij}\)</span> mean?</h5>
+<p>Here, we use what is known as the <em>Mahalonobis Norm</em>:
+<span class="arithmatex">\(\|\mathbf{e}\| _{\Sigma}^2 = \mathbf{e}^{\top}
+\Sigma^{-1} \mathbf{e}\)</span>.  With the standard Frobenius
+Norm, (<em>aka</em> <span class="arithmatex">\(L_2\)</span> Norm), <span class="arithmatex">\(\|\mathbf{e}\|_F^2 =
+\mathbf{e}^{\top}\mathbf{e}\)</span>, but the <span class="arithmatex">\(\Sigma\)</span> in
+Mahalonobis Norm get sandwiched between the vectors as
+covariance matrix and allows for uncertainty factor.</p>
+<h5 id="physical-intuition-stiffness-of-the-spring">Physical Intuition: “Stiffness of the Spring”</h5>
+<p>Physically speaking, <span class="arithmatex">\(\Sigma_{ij}\)</span> represents how much
+a specific spring is allowed to stretch.</p>
+<ul>
+<li><strong>Small <span class="arithmatex">\(\Sigma_{ij}\)</span> (High Certainty):</strong> This is a
+    stiff steel cable.  If the sensor is very accurate
+    (like a high-end LiDAR), the optimizer is forbidden
+    from “stretching” this connection.  The error <span class="arithmatex">\(e\)</span> is
+    multiplied by a massive <span class="arithmatex">\(\Sigma_{ij}^{-1}\)</span>, making
+    even tiny errors “cost” a lot.</li>
+<li><strong>Large <span class="arithmatex">\(\Sigma_{ij}\)</span> (Low Certainty):</strong> This is a
+    loose rubber band.  If the sensor is noisy (like a
+    camera in the dark), the optimizer is allowed to
+    stretch or ignore this measurement because the “cost”
+    of the error is minimized by the small
+    <span class="arithmatex">\(\Sigma_{ij}^{-1}\)</span>.</li>
+</ul>
+<h5 id="the-csit-angle">The CS/IT angle</h5>
+<ul>
+<li>
+<p>CS:</p>
+<p>We solve this by finding the point where the gradient
+of the total cost is zero. We use iterative methods
+because the “springs” (the <span class="arithmatex">\(h(x)\)</span> functions) are
+non-linear.</p>
+</li>
+<li>
+<p>IT:</p>
+<p>This optimization is the “Heavy Lifting” of AR.  While
+Ded-Reckoning happens at 1000Hz, this optimisation
+might only happen at 10-30Hz because it has to solve
+for the entire map at once.</p>
+</li>
+</ul>
+<h4 id="the-isotropic-assumption">The Isotropic Assumption</h4>
+<p>In many “standard” AR implementations, we assume the
+noise is Isotropic (the same in <span class="arithmatex">\(u\)</span> and <span class="arithmatex">\(v\)</span>
+directions).  In this case, <span class="arithmatex">\(\Sigma\)</span> for a single
+observation is a simple <span class="arithmatex">\(2 \times 2\)</span> diagonal matrix:</p>
+<div class="arithmatex">\[\begin{align*}
+  \Sigma_{ij}
+  &amp;= \begin{bmatrix}
+    \sigma^2 &amp; 0 \\ 0 &amp; \sigma^2
+  \end{bmatrix}
+\end{align*}\]</div>
+<p>Here, <span class="arithmatex">\(\sigma^2\)</span> is usually the <em>Variance of the
+Feature Detector</em> (often around <span class="arithmatex">\(\sfrac14\)</span> to <span class="arithmatex">\(1\)</span>
+sq.pixels.)</p>
+<h5 id="its-effect-on-computation-the-whitened-residual">Its effect on computation: The “Whitened” Residual</h5>
+<p>When we compute the cost for a single factor, we
+“whiten” the error vector before squaring it.  If
+<span class="arithmatex">\(\mathbf{e}_{ij} = \mathbf{z}_{ij} - h(\mathbf{x}_i,
+\mathbf{m}_j)\)</span> , the weighted error calculation looks
+like this:</p>
+<ul>
+<li>Calculate the raw error: <span class="arithmatex">\(\mathbf{e}_{ij}
+      = \begin{bmatrix} \Delta u \\ \Delta v \end{bmatrix}\)</span></li>
+<li>Apply the stiffness: We don't just multiply; we use
+    the inverse <span class="arithmatex">\(\Sigma_{ij}^{-1}\)</span>.</li>
+<li>Compute the Cost: <span class="arithmatex">\(\text{Cost}_{ij} =
+      \mathbf{e}_{ij}^{\top} \Sigma_{ij}^{-1}
+      \mathbf{e}_{ij}\)</span></li>
+</ul>
+<p>If <span class="arithmatex">\(\Sigma\)</span> is just a scalar variance <span class="arithmatex">\(\sigma^2\)</span>, then
+informally speaking, this simplifies to:</p>
+<div class="arithmatex">\[\begin{align*}
+  \text{cost}_{ij}
+  &amp;= \frac{(\Delta u)^2 + (\Delta v)^2}{\sigma^2}
+\end{align*}\]</div>
+<h5 id="effectively-speaking">Effectively speaking,</h5>
+<p>Under the isotropic assumption, the complex looking
+Mahalonobis norm in the cost function (in
+<ref:sec:nonlinear-least-squares>) boils
+down to a weight-adjusted Frobenius norm, as follows:</p>
+<div class="arithmatex">\[\begin{align*}
+  \mathcal{L}
+  &amp;= \sum_{i,j} \|\mathbf{e}_{ij}\|_{\Sigma_{ij}}^2
+    = \sum_{i,j} \mathbf{e}_{ij}^{\top}
+    {\Sigma_{ij}}^{-1} \mathbf{e}_{ij}
+  \\
+  &amp;= \sum_{i,j} \frac{1}{\sigma_{ij}^2}
+    \|\mathbf{e}_{ij}\|_{F}^2
+    = \sum_{i,j} \frac{1}{\sigma_{ij}^2}
+    \mathbf{e}_{ij}^{\top} \mathbf{e}_{ij}
+  &amp;&amp; \text{\ldots under isotropic assumption.}
+\end{align*}\]</div>
+<p><a id="org6f0c1b2"></a></p>
+<h3 id="background-in-graph-theory">Background in Graph Theory</h3>
+<p><assets/slam_graph_3.pdf></p>
+<h4 id="what-is-a-graph">What is a graph?</h4>
+<p>A graph is a mathematical structure used to model
+pairwise relations between objects, consisting of a set
+of vertices (or nodes/dots) and a set of edges (lines)
+connecting those vertices. Formally denoted as <span class="arithmatex">\(G =
+(V,E)\)</span>, it maps how entities (vertices) are connected
+(edges).</p>
+<p><em>Key Concepts</em></p>
+<ul>
+<li><strong>Vertices <span class="arithmatex">\(V\)</span>:</strong> The nodes or dots representing objects.</li>
+<li><strong>Edges <span class="arithmatex">\(E\)</span>:</strong> The lines connecting two vertices,
+    representing relationships.</li>
+<li><strong>Simple Graph:</strong> A graph with no loops (edges
+    connecting a vertex to itself) and no multiple edges
+    between the same two vertices.</li>
+<li><strong>Undirected Graph:</strong> A graph where edges have no
+    direction, meaning the relation is two-way (e.g., <span class="arithmatex">\(A\)</span>
+    connects to <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(B\)</span> connects to <span class="arithmatex">\(A\)</span>).</li>
+<li><strong>Directed Graph (Digraph):</strong> A graph where edges have
+    directions (arrows), indicating a one-way
+    relationship.</li>
+<li><strong>Adjacent Vertices:</strong> Two vertices that are joined by
+    an edge.</li>
+</ul>
+<p><em>Common Examples</em></p>
+<ul>
+<li><strong>Social Network:</strong> People (vertices) and friendships
+    (edges).</li>
+<li><strong>GPS/ Map:</strong> Cities (vertices) and roads (edges).</li>
+<li><strong>Internet:</strong> Webpages (vertices) and hyperlinks
+    (directed edges).</li>
+</ul>
+<p>Graphs are powerful for modeling non-linear, complex
+networks, unlike linear data structures.</p>
+<h4 id="whats-mathematical-about-this">What’s mathematical about this?</h4>
+<ol>
+<li><strong>Formality</strong>: <span class="arithmatex">\(V\equiv \{ v_{i} : 0 &lt; i \leqslant N \}\)</span>
+    is a set of vertices <span class="arithmatex">\(v_i\)</span> — in its strictest
+    mathematical sense.  And each edge, <span class="arithmatex">\(e_{j}\)</span> is a
+    subset of vertices, so that the set of edges
+    <span class="arithmatex">\(E\equiv \{e_j : 0 &lt; j \leqslant M \}\)</span> is a also a
+    set, albeit that of subsets of verts.</li>
+<li><strong>Tangibility</strong>:<ul>
+<li><strong>Degree of a node:</strong> The number of edges connected
+    to a vertex.</li>
+<li><strong>Adjacency Matrix:</strong> Graphs can be represented
+    mathematically as a matrix (a grid of numbers),
+    allowing for linear algebra to analyze their
+    properties.</li>
+<li><strong>Path and Cycle detection:</strong> Mathematical formulas
+    exist to determine if a path exists between nodes
+    (Euler paths, Hamilton circuits)</li>
+</ul>
+</li>
+<li><strong>Invariants and Combinatorics</strong>: Graph theory focuses
+    on invariants—properties that stay the same
+    regardless of how a graph is drawn.<ul>
+<li><strong>Handshaking Lemma:</strong> A fundamental theorem stating
+    that the sum of all vertex degrees is always twice
+    the number of edges, which means the number of
+    odd-degree vertices must be even.</li>
+<li><strong>Planarity:</strong> A graph is planar if it can be drawn
+    on a plane without edges crossing, a concept
+    deeply rooted in topology.</li>
+</ul>
+</li>
+<li><strong>Mathematical Origin</strong>: Graph theory was invented by
+    Leonhard Euler to solve the Seven Bridges of
+    Königsberg problem.  Euler recognized that the
+    physical layout was irrelevant, and only the
+    topological structure of nodes and connections
+    mattered.</li>
+<li><strong>Relationship to Reality</strong>: While it is used to model
+    social networks or transport systems, the rules
+    governing connectivity are derived from
+    combinatorics, not intuition.</li>
+</ol>
+<p>In summary, graph structures are mathematical because
+they are discrete systems that follow strict algebraic
+and topological laws. They are used to model the real
+world, but the analysis is based on mathematical
+principles rather than human subjective interpretation.</p>
+<h4 id="whats-a-bipartite-graph">What’s a bipartite graph?</h4>
+<p>A bipartite graph is a set of graph vertices
+partitioned into two disjoint sets (<span class="arithmatex">\(V_1\)</span> and <span class="arithmatex">\(V_2\)</span>)
+such that every edge connects a vertex in <span class="arithmatex">\(V_1\)</span> to one
+in <span class="arithmatex">\(V_2\)</span>.  No edges exist between vertices within the
+same set.  They are 2-colorable and contain no
+odd-length cycles.</p>
+<p><em>Key Characteristics and Properties</em></p>
+<ul>
+<li><strong>Vertex Partitioning:</strong> The graph's vertices can be
+    divided into two independent, disjoint sets, say
+    <span class="arithmatex">\(V_{1}\)</span> and <span class="arithmatex">\(V_{2}\)</span>.</li>
+<li><strong>Edge Restriction:</strong> All edges must connect a vertex
+    from set <span class="arithmatex">\(V_1\)</span> to a vertex in set <span class="arithmatex">\(V_2\)</span>.  No edges
+    are allowed between vertices within the same set.</li>
+<li><strong>2-Colorability:</strong> A graph is bipartite if and only if
+    it can be colored using only two colors, such that no
+    two adjacent vertices share the same color.</li>
+<li><strong>Odd Cycles:</strong> A graph is bipartite if and only if it
+    contains no odd-length cycles.</li>
+<li><strong>Complete Bipartite Graph (<span class="arithmatex">\(K_{m,n}\)</span>):</strong> A specific
+    type where every vertex in set <span class="arithmatex">\(V_1\)</span> (size <span class="arithmatex">\(m\)</span>) is
+    connected to every vertex in set <span class="arithmatex">\(V_2\)</span> (size <span class="arithmatex">\(n\)</span>).</li>
+</ul>
+<p><em>Examples in Daily Life</em></p>
+<ul>
+<li><strong>Job Matching:</strong> One set is employers, the other is
+    job openings. Edges connect employers to jobs they
+    offer.</li>
+<li><strong>Recommendation Systems:</strong> One set of nodes is users,
+    the other is products. Edges represent a user
+    purchasing or rating a product.</li>
+</ul>
+<p><em>How to Identify a Bipartite Graph?</em></p>
+<ul>
+<li><strong>Breadth-First Search (BFS) or Depth-First Search (DFS):</strong> Assign
+    a colour to a vertex, then its neighbours to a
+    different colour, alternating colours. If you find
+    two adjacent vertices with the same colour, it is not
+    bipartite.</li>
+<li><strong>Odd Cycle Test:</strong> If the graph has an odd-length
+    cycle, it is not bipartite.</li>
+</ul>
+<p><a id="org0610e44"></a></p>
+<h3 id="background-in-optimisation-theory">Background in Optimisation Theory</h3>
+<h4 id="quadratic-programming">Quadratic Programming</h4>
+<div class="arithmatex">\[\begin{align*}
+  f(\mathbf{x})
+  &amp;= \frac12 \mathbf{x}^{\top}Q\mathbf{x} +
+    \mathbf{c}^{\top}\mathbf{x}
+  &amp;&amp; \text{\ldots Standard Quadratic Cost Function.}
+  \\
+  \nabla_{\mathbf{x}}f(\mathbf{x}_{*})
+  &amp;= Q\mathbf{x}_* + c = 0
+  \\
+  \implies \mathbf{x}_*
+  &amp;= -Q^{-1}\mathbf{c}
+\end{align*}\]</div>
+<h5 id="the-concept">The Concept</h5>
+<p>QP is the study of finding the minimum of a “perfect”
+quadratic bowl.  In optimization, we love quadratics
+because they have a single global minimum that can be
+found in exactly one step.</p>
+<h5 id="the-mathematical-form">The Mathematical Form</h5>
+<p>A standard quadratic cost function looks like:
+<span class="arithmatex">\(f(\mathbf{x}) = \frac{1}{2}\mathbf{x}^{\top} Q
+\mathbf{x} + c^{\top} \mathbf{x}\)</span> , where <span class="arithmatex">\(Q\)</span> (The
+Hessian): Defines the “shape” and “stiffness” of the
+bowl; and <span class="arithmatex">\(\mathbf{c}\)</span> (The Linear Trend): Defines
+where the bowl is centred.</p>
+<h5 id="the-solution">The Solution</h5>
+<p>To find the bottom, we take the gradient and set it to
+zero: <span class="arithmatex">\(\nabla f(\mathbf{x}_*) = Q\mathbf{x}_* + c = 0
+\implies \mathbf{x}_* = -Q^{-1}c\)</span>.</p>
+<h5 id="physical-intuition">Physical Intuition</h5>
+<p>In a Factor Graph, if all the “springs” were linear
+(like literal metal springs following <span class="arithmatex">\(F=kx\)</span>), the
+entire SLAM problem would be a single QP.  We would
+solve it once and be done.</p>
+<h4 id="gauss-newton-approximation">Gauss-Newton approximation</h4>
+<p>Let’s take the context of camera re-projection error.
+And the cost function be,</p>
+<div class="arithmatex">\[\begin{align*}
+  f(\mathbf{x})
+  &amp;= \frac12 \mathbf{e}(\mathbf{x})^{\top}
+    \mathbf{e}(\mathbf{x}) 
+  &amp;&amp; \mathbf{e}(\mathbf{x}) = \mathbf{z} -
+     h(\mathbf{x})
+  \\
+  \nabla f(\mathbf{x})
+  &amp;= \left( \nabla \mathbf{e}(\mathbf{x}) \right)^{\top}
+    \mathbf{e}(\mathbf{x}) = J^{\top}\mathbf{e}(\mathbf{x})
+  &amp;&amp; J = \nabla \mathbf{e}(\mathbf{x})
+  \\
+  \nabla^2 f(\mathbf{x})
+  &amp;= \underbrace{\left( \nabla \mathbf{e}(\mathbf{x})
+    \right)^{\top} \nabla \mathbf{e}(\mathbf{x})}
+    _{J^{\top}J} + \underbrace{ \left(\sum_i
+    e_i(\mathbf{x}) \nabla^2e_i(\mathbf{x}) \right) }
+    _{\text{ignored assuming } \forall i,\, e_i \to 0}
+  \\
+  f(\mathbf{x} + \Delta\mathbf{x})
+  &amp;\approx f(\mathbf{x}) + \nabla f(\mathbf{x})^{\top}
+    \Delta \mathbf{x} + \frac12 \Delta
+    \mathbf{x}^{\top} \nabla^2f(\mathbf{x}) \Delta
+    \mathbf{x}
+  &amp;&amp; \text{(Taylor Expansion)}
+\end{align*}\]</div>
+<h5 id="the-concept_1">The Concept</h5>
+<p>The real world isn't a perfect bowl. The camera
+projection <span class="arithmatex">\(h(x)\)</span> is full of sines, cosines, and
+divisions.  Gauss-Newton is the bridge that
+<em>approximates</em> a non-linear problem as a <em>sequence of
+QPs</em>.</p>
+<h5 id="the-logic">The Logic</h5>
+<p>Instead of trying to solve the complex landscape all at
+once, we look at our current position and ask: “If this
+landscape were a quadratic bowl right here, where would
+the bottom be?”</p>
+<ol>
+<li><em>Linearise</em>: We take the Jacobian <span class="arithmatex">\(J\)</span> (the slope) of
+    our error, so that <span class="arithmatex">\(\mathbf{c} = \nabla
+       f(\mathbf{x}) = J^{\top}\mathbf{e}(\mathbf{x})\)</span>.</li>
+<li><em>Approximate the Hessian</em>: Assume <span class="arithmatex">\(Q \approx
+       J^{\top} J\)</span>.</li>
+<li>
+<p><em>Solve the QP</em>: Treat the neighbourhood of
+    <span class="arithmatex">\(\mathbf{x}\)</span> as a bowl, and solve the QP,</p>
+<p>\begin{align<em>}
+  \mathrm{QP}(\Delta\mathbf{x})
+  &amp;= f(\mathbf{x}+\Delta\mathbf{x}) - f(\mathbf{x})
+  \approx \frac12 \Delta\mathbf{x}^{\top} Q
+    \Delta\mathbf{x} + \mathbf{c}^{\top}
+    \Delta\mathbf{x}
+  \
+  \Delta\mathbf{x}_</em>
+  &amp;= -Q^{-1}\mathbf{c} = -(J<sup -1="-1">{\top}J)</sup>
+    \mathbf{e}(\mathbf{x})
+\end{align} J^{\top<em>}
+4.  </em>Step*: Move to the new position, <span class="arithmatex">\(\mathbf{x} \gets
+   \mathbf{x} + \Delta\mathbf{x}_*\)</span> and repeat until
+convergence.</p>
+</li>
+</ol>
+<h5 id="convergence-criteria">Convergence Criteria</h5>
+<p>Practically, three things are checked to be safe.</p>
+<ol>
+<li><em>Step delta</em>.  Is the change if state <span class="arithmatex">\(\|\Delta
+       \mathbf{x}_*\|\)</span> effectively zero.</li>
+<li><em>Gradient delta</em>.  Is the slope <span class="arithmatex">\(\|J^{\top}
+       \mathbf{e}(\mathbf{x})\|\)</span> effectively flat?</li>
+<li><em>Cost delta</em>.  Did the total error <span class="arithmatex">\(|f(\mathbf{x} +
+       \Delta\mathbf{x}_*) - f(\mathbf{x})|\)</span> stop decreasing?</li>
+</ol>
+<div class="arithmatex">\[\begin{align*}
+  \|\Delta \mathbf{x}_*\| + \|J^{\top}
+  \mathbf{e}(\mathbf{x})\| + |f(\mathbf{x} +
+  \Delta\mathbf{x}_*) - f(\mathbf{x})|
+  &amp;&lt; \epsilon
+\end{align*}\]</div>
+<h4 id="levenberg-marquardt-algorithm">Levenberg Marquardt Algorithm</h4>
+<p>The Gauss-Newton method assumes the local “bowl”
+approximation is valid.  But what if <span class="arithmatex">\(J^{\top}J\)</span> is
+singular or the step <span class="arithmatex">\(\Delta \mathbf{x}\)</span> is too large?
+The solver overshoots, and the system diverges.  This
+is where Levenberg and Marquardt stepped in.  They
+added a “damping” term <span class="arithmatex">\(\lambda\)</span> to the diagonal of the
+Hessian:</p>
+<div class="arithmatex">\[\begin{align*}
+  (J^{\top} J + \lambda \mathbf{I}) \Delta \mathbf{x}_*
+  &amp;= -J^{\top} \mathbf{e}(\mathbf{x}) \\ \text{or,
+  }\quad \Delta \mathbf{x}_*
+  &amp;= -(J^{\top} J + \lambda I) ^{-1} J^{\top}
+    \mathbf{e}(\mathbf{x})
+\end{align*}\]</div>
+<p>The beauty of LM is that it dynamically slides between
+two optimization strategies based on the value of
+<span class="arithmatex">\(\lambda\)</span>:</p>
+<h5 id="when-lambda-is-large-the-gradient-descent-limit">When <span class="arithmatex">\(\lambda\)</span> is large (The Gradient Descent Limit)</h5>
+<p><span class="arithmatex">\(\Delta \mathbf{x}_* \approx
+-\mathbf{J}^{\top} \mathbf{e} / \lambda\)</span>. <br />
+This is a small step in the direction of the steepest
+descent. It is stable but slow. We use this when our
+quadratic approximation is poor (the error is
+increasing).</p>
+<h5 id="when-lambda-is-small-the-quadratic-program-limit">When <span class="arithmatex">\(\lambda\)</span> is small (The Quadratic Program Limit)</h5>
+<p><span class="arithmatex">\(\Delta \mathbf{x}_* \approx (J^{\top}J)^{-1}J^{\top}
+\mathbf{e}(\mathbf{x})\)</span>. <br />
+This is the Gauss-Newton step. It is unstable far from
+the minimum but lightning-fast (quadratic convergence)
+near the minimum.</p>
+<h5 id="comparison-with-gauss-newton">Comparison with Gauss-Newton</h5>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Feature</b></th>
+<th scope="col" class="org-left"><b>Standard QP</b></th>
+<th scope="col" class="org-left"><b>LM Algorithm</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Curvature</td>
+<td class="org-left">Exact Hessian (\(H\))</td>
+<td class="org-left">Approximate Hessian, <i>i.e.</i> (\(J^{\top}J+\lambda I\))</td>
+</tr>
+
+<tr>
+<td class="org-left">Trust Region</td>
+<td class="org-left">Infinite (assumes the bowl is real)</td>
+<td class="org-left">Finite (constrained by \(\lambda\))</td>
+</tr>
+
+<tr>
+<td class="org-left">Step Calculation</td>
+<td class="org-left">One-shot Matrix Inversion</td>
+<td class="org-left">Iterative, “Solve, check error, and adjust \(\lambda\)”</td>
+</tr>
+
+<tr>
+<td class="org-left">Global Goal</td>
+<td class="org-left">Find the bottom of the bowl</td>
+<td class="org-left">Move between local bowls until tension is zero</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="strategy-for-tuning-lambda">Strategy for tuning <span class="arithmatex">\(\lambda\)</span></h5>
+<p>In SLAM, we use LM because we are constantly moving
+from “I have no idea where I am” to “I am almost
+certain where I am.”</p>
+<ol>
+<li><em>Start</em>: <span class="arithmatex">\(\lambda\)</span> is high. We take cautious,
+    gradient-like steps to move toward the general area
+    of the minimum.</li>
+<li><em>Middle</em>: As the error decreases, we decrease
+    <span class="arithmatex">\(\lambda\)</span>. The “springs” of our Factor Graph start
+    behaving more like the Quadratic Model we built.</li>
+<li><em>End</em>: <span class="arithmatex">\(\lambda\)</span> becomes near-zero. We take a final,
+    massive “Gauss-Newton leap” to the exact center of
+    the minimum, providing the millimeter-precision
+    needed for AR.</li>
+</ol>
+<p><a id="orgcf118cc"></a></p>
+<h2 id="cv">CV</h2>
+<p>To put this in perspective, if <strong>SLAM</strong> is the “Inner
+Ear” and “Memory” of an AR system (handling balance,
+movement, and mapping), then <strong>Computer Vision (CV)</strong> is
+the “Eyes” and “Intelligence.”</p>
+<p>While SLAM tells you <em>where</em> you are, CV tells you
+<em>what</em> you are looking at.  Together, they bridge the
+gap between a raw video feed and a persistent digital
+world.</p>
+<p><a id="org809fc16"></a></p>
+<h3 id="the-cv-slam-symbiosis">The CV-SLAM Symbiosis</h3>
+<p>It is common to say AR = CV + SLAM. Here is how they divide the labor:</p>
+<ul>
+<li><strong>SLAM:</strong> Focuses on <strong>geometry</strong>. It calculates the
+    transformation matrix between the camera and the
+    world.  It doesn’t care if a feature is a “chair” or
+    a “rock”—it only cares that the feature is a 3D point
+    at <span class="arithmatex">\((x, y, z)\)</span>.</li>
+<li><strong>Computer Vision:</strong> Focuses on <strong>semantics and
+    perception</strong>.  It interprets the image to provide
+    context, constraints, and interaction points for the
+    AR content.</li>
+</ul>
+<p><a id="orgd2f2384"></a></p>
+<h3 id="key-cv-tasks-in-ar">Key CV Tasks in AR</h3>
+<p>Beyond just finding points for SLAM, CV performs
+several critical functions that make AR feel “real”:</p>
+<h4 id="image-recognition-tracking">Image Recognition &amp; Tracking</h4>
+<p>This is the ability to detect a specific 2D image (like
+a movie poster or a QR code) and use it as a “Trigger.”</p>
+<ul>
+<li><strong>How it works:</strong> CV extractors (like SIFT or ORB)
+    create a “fingerprint” of the image and match it
+    against a database.</li>
+<li><strong>AR Result:</strong> When you point your phone at a specific
+    book cover, a 3D animation pops out of it.</li>
+</ul>
+<h4 id="object-detection-labeling">Object Detection &amp; Labeling</h4>
+<p>CV identifies real-world objects (cars, people,
+furniture) using Deep Learning (CNNs).</p>
+<p><em>Plausible AR Result</em>: A “Terminator-style” HUD that
+labels the people in your field of view or recognizes a
+specific model of a machine to overlay repair
+instructions.</p>
+<h4 id="semantic-segmentation">Semantic Segmentation</h4>
+<p>This is the process of labeling every single pixel in a
+frame (e.g., “this pixel is grass,” “this pixel is
+sky”).</p>
+<p><em>Plausible AR Result</em>: This allows for <strong>Occlusion</strong>.  If
+the CV knows the pixels in the centre of the screen are
+a “Human,” the AR system can hide a digital monster
+<em>behind</em> that person instead of just rendering it on
+top of them.</p>
+<p><a id="org4a5d8ad"></a></p>
+<h3 id="scene-understanding-the-physics-of-cv">Scene Understanding: The “Physics” of CV</h3>
+<p>For an AR object to look like it belongs in the room,
+CV must extract environmental data that SLAM usually
+ignores:</p>
+<ul>
+<li><strong>Plane Detection:</strong> CV identifies flat surfaces
+    (floors, tables, walls). This is where the <strong>Quadratic
+    Program</strong> of our SLAM system meets the “Logic” of CV.
+    The system identifies a cluster of 3D points that are
+    co-planar and “snaps” a virtual floor to them.</li>
+<li><strong>Light Estimation:</strong> CV analyzes the highlights and
+    shadows in the camera feed to determine the direction
+    and intensity of real-world light.</li>
+</ul>
+<p><em>Plausible AR Result</em>: A virtual dinosaur casts a
+shadow that matches the shadows of the real furniture.</p>
+<p><a id="orgc9adc2e"></a></p>
+<h3 id="the-frontend-of-the-pipeline-feature-extraction">The “Frontend” of the Pipeline (Feature Extraction)</h3>
+<p>Computer Vision provides the raw materials for
+SLAM.  Before you can run a Gauss-Newton optimization,
+CV must:</p>
+<ol>
+<li><em>Detect</em>: Find “interesting” pixels (corners,
+    blobs).</li>
+<li><em>Describe</em>: Turn those pixels into a math vector
+    (Descriptor).</li>
+<li><em>Match</em>: Compare descriptors between Frame A and
+    Frame B.</li>
+</ol>
+<p>If the CV “Front-end” fails to find good matches (due
+to motion blur or low light), the SLAM “Back-end” (the
+optimizer) has no data to work with, and the AR
+“drifts.”</p>
+<p><a id="org8d868d4"></a></p>
+<h2 id="summary-the-two-pillars">Summary: The Two Pillars</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Tech</b></th>
+<th scope="col" class="org-left"><b>Primary Goal</b></th>
+<th scope="col" class="org-left"><b>Math/Tooling</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">SLAM</td>
+<td class="org-left">Spatial Consistency</td>
+<td class="org-left">Factor Graphs, Gauss-Newton, IMU Integration</td>
+</tr>
+
+<tr>
+<td class="org-left">CV</td>
+<td class="org-left">Context &amp; Realism</td>
+<td class="org-left">Neural Networks, Feature Matching, Photometry</td>
+</tr>
+</tbody>
+</table>
+
+<p>In modern AR, the line is blurring. We now have
+<strong>Semantic SLAM</strong>, where the “Factor Graph” doesn’t
+just contain points, but recognized objects (e.g., “The
+factor between Pose A and Pose B must respect the fact
+that Pose A is looking at a ‘Table’”). </p>
+<p>Does this distinction help you see CV as the
+“Intelligence” layer that sits on top of the
+“Geometric” foundation of SLAM?</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 15, 2026 07:28:34 UTC">April 15, 2026</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:bvraghav@gmail.com">Raghav B. Venkataramaiyer</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../the-geometric-model/" class="md-footer__link md-footer__link--next" aria-label="Next: The geometric model">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The geometric model
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href='https://bvraghav.com/'>Raghav B. Venkataramaiyer</a> &lt;<code style='color:inherit; background:transparent'>bv.raghav</code>&gt;
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/tiet-unc512/tiet-unc512.github.io" target="_blank" rel="noopener" title="Git Repo for UNC512 Course Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer", "header.autohide", "content.tabs.link", "navigation.tracking", "navigation.top", "toc.integrate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="../../javascript/arithmatex.js"></script>
+      
+    
+  </body>
+</html>
